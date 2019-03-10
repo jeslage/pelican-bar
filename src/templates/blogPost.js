@@ -1,12 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import styled from 'styled-components'
+
+const Container = styled.div`
+  background: papayawhip;
+`
+
 const BlogPost = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { title, date } = frontmatter
   return (
-    <div className="blog-post-container">
+    <Container>
       <div className="blog-post">
         <h1>{title}</h1>
         <h2>{date}</h2>
@@ -15,7 +21,7 @@ const BlogPost = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
-    </div>
+    </Container>
   )
 }
 

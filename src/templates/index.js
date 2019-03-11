@@ -1,20 +1,31 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import styled from 'styled-components'
 
 const Container = styled.div`
-  background: red;
+  background: #f4f4f4;
 `
 
 const IndexPage = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+  const { site, blogEntries, eventEntries } = data
+  const { frontmatter } = site
+
   const { title } = frontmatter
+
   return (
     <Container>
       <div className="blog-post">
         <h1>{title}</h1>
+
+        <h2>BlogPosts</h2>
+        {blogEntries.edges.map(({ node }) => (
+          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+        ))}
+        <h2>Events</h2>
+        {eventEntries.edges.map(({ node }) => (
+          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+        ))}
       </div>
     </Container>
   )
@@ -22,10 +33,40 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(fields: { slug: { eq: $path } }) {
+    site: markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
         title
+      }
+    }
+    blogEntries: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "blog" } } }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+    eventEntries: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "event" } } }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
       }
     }
   }

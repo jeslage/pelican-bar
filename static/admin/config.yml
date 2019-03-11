@@ -11,7 +11,7 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: data/blog
+    folder: src/pages/blog
     create: true
     slug: '{{slug}}'
     fields:
@@ -22,7 +22,7 @@ collections:
 
   - name: events
     label: Events
-    folder: data/events
+    folder: src/pages/events
     create: true
     slug: 'events/{{slug}}'
     fields:
@@ -34,9 +34,10 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: 'data/index.md'
+      - file: 'src/pages/index.md'
         label: 'Homepage'
         name: 'index'
+        delete: false
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
           - { label: Title, name: title, widget: string }

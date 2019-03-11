@@ -13,10 +13,9 @@ collections:
     label: Blog
     folder: data/blog
     create: true
-    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { name: 'type', label: 'Type', widget: 'hidden', default: 'blog' }
-      - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
@@ -25,10 +24,9 @@ collections:
     label: Events
     folder: data/events
     create: true
-    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    slug: 'events/{{slug}}'
     fields:
       - { name: 'type', label: 'Type', widget: 'hidden', default: 'event' }
-      - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
@@ -36,21 +34,19 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: 'data/pages/index.md'
+      - file: 'data/index.md'
         label: 'Homepage'
         name: 'index'
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
-          - { name: path, label: Path }
           - { label: Title, name: title, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
 
-      - file: 'data/pages/about.md'
+      - file: 'data/about.md'
         label: 'About'
         name: 'about'
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'about' }
-          - { name: path, label: Path }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }

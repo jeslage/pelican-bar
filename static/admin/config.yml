@@ -41,6 +41,7 @@ collections:
         name: 'index'
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
+          - { name: path, label: Path }
           - { label: Title, name: title, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
@@ -50,5 +51,6 @@ collections:
         name: 'about'
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'about' }
+          - { name: path, label: Path }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }

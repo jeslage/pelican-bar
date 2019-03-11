@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: develop
-  accept_roles: #optional - accepts all users if left out
+  accept_roles:
     - admin
     - editor
 
@@ -13,8 +13,43 @@ collections:
     label: Blog
     folder: data/blog
     create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
+      - { name: 'type', label: 'Type', widget: 'hidden', default: 'blog' }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+
+  - name: events
+    label: Events
+    folder: data/events
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    fields:
+      - { name: 'type', label: 'Type', widget: 'hidden', default: 'event' }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'data/pages/index.md'
+        label: 'Homepage'
+        name: 'index'
+        fields:
+          - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+
+      - file: 'data/pages/about.md'
+        label: 'About'
+        name: 'about'
+        fields:
+          - { label: 'Type', name: 'type', widget: 'hidden', default: 'about' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }

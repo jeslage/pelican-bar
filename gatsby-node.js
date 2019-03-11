@@ -14,6 +14,9 @@ exports.createPages = ({ actions, graphql }) => {
             fields {
               slug
             }
+            frontmatter {
+              type
+            }
           }
         }
       }
@@ -26,7 +29,9 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: blogPostTemplate,
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.type)}.js`
+        ),
         context: {} // additional data can be passed via context
       })
     })

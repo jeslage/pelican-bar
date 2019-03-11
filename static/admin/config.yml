@@ -42,7 +42,6 @@ collections:
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
 

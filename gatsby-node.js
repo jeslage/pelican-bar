@@ -4,8 +4,6 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blogPost.js`)
-
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -23,6 +21,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
+      result.errors.forEach(e => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
 
@@ -30,7 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.type)}.js`
+          `src/templates/${String(node.frontmatter.type)}.js`
         ),
         context: {} // additional data can be passed via context
       })

@@ -10,12 +10,11 @@ const Container = styled.div`
 const BlogPost = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  const { title, date } = frontmatter
+  const { title } = frontmatter
   return (
     <Container>
       <div className="blog-post">
         <h1>{title}</h1>
-        <h2>{date}</h2>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -30,7 +29,6 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
       }
     }

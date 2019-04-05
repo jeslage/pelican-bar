@@ -1,35 +1,35 @@
 backend:
-  name: git-gateway
-  branch: develop
+  name: 'git-gateway'
+  branch: 'develop'
   accept_roles:
-    - admin
-    - editor
+    - 'admin'
+    - 'editor'
 
-media_folder: static/assets
-public_folder: assets
+media_folder: 'static/assets'
+public_folder: 'assets'
 
 collections:
-  - name: blog
-    label: Blog
-    folder: src/pages/blog
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog'
     create: true
     slug: '{{slug}}'
     fields:
       - { name: 'type', label: 'Type', widget: 'hidden', default: 'blog' }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: 'date', label: 'Date', widget: 'date' }
+      - { name: 'title', label: 'Title' }
+      - { name: 'body', label: 'Body', widget: 'markdown' }
 
-  - name: events
-    label: Events
-    folder: src/pages/events
+  - name: 'events'
+    label: 'Events'
+    folder: 'src/pages/events'
     create: true
     slug: 'events/{{slug}}'
     fields:
       - { name: 'type', label: 'Type', widget: 'hidden', default: 'event' }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: 'date', label: 'Date', widget: 'date' }
+      - { name: 'title', label: 'Title' }
+      - { name: 'body', label: 'Body', widget: 'markdown' }
 
   - name: 'pages'
     label: 'Pages'
@@ -40,24 +40,24 @@ collections:
         delete: false
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
-          - { label: Title, name: title, widget: string }
-          - { label: Headline, name: headline, widget: string }
-          - { label: Subline, name: subline, widget: string }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Headline', name: 'headline', widget: 'string' }
+          - { label: 'Subline', name: 'subline', widget: 'string' }
 
   - name: 'settings'
     label: 'Settings'
     files:
-      - file: 'src/pages/globals.md'
-        label: 'Globals'
-        name: 'globals'
+      - file: 'src/pages/settings/seo.md'
+        label: 'SEO'
+        name: 'seo'
         delete: false
         fields:
+          - { label: 'Type', name: 'type', widget: 'hidden', default: 'settings' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'string' }
           - {
-              label: 'Type',
-              name: 'type',
-              widget: 'hidden',
-              default: 'globals',
+              label: 'Keywords',
+              name: 'keywords',
+              hint: 'Separate keywords with a comma',
+              widget: 'string',
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Headline, name: headline, widget: string }
-          - { label: Subline, name: subline, widget: string }

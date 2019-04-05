@@ -26,7 +26,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      if (node.frontmatter.type !== 'globals') {
+      if (node.frontmatter.type !== 'settings') {
         createPage({
           path: node.fields.slug,
           component: path.resolve(`src/templates/${String(node.frontmatter.type)}.jsx`),

@@ -54,7 +54,7 @@ collections:
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'settings' }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
           - {
               label: 'Keywords',
               name: 'keywords',

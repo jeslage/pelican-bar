@@ -26,19 +26,21 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(
-          `src/templates/${String(node.frontmatter.type)}.js`
-        ),
-        context: {} // additional data can be passed via context
-      })
+      if (node.frontmatter.type !== 'globals') {
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve(
+            `src/templates/${String(node.frontmatter.type)}.js`
+          ),
+          context: {} // additional data can be passed via context
+        })
+      }
     })
   })
 }
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })

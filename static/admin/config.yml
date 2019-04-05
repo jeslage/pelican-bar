@@ -41,5 +41,23 @@ collections:
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
           - { label: Title, name: title, widget: string }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
+          - { label: Headline, name: headline, widget: string }
+          - { label: Subline, name: subline, widget: string }
+
+  - name: 'settings'
+    label: 'Settings'
+    files:
+      - file: 'src/pages/globals.md'
+        label: 'Globals'
+        name: 'globals'
+        delete: false
+        fields:
+          - {
+              label: 'Type',
+              name: 'type',
+              widget: 'hidden',
+              default: 'globals',
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Headline, name: headline, widget: string }
+          - { label: Subline, name: subline, widget: string }

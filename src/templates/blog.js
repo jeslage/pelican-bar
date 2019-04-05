@@ -2,31 +2,41 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import styled from 'styled-components'
+import SiteWrapper from '../wrapper/siteWrapper'
 
 const Container = styled.div`
   background: papayawhip;
 `
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { content, site } = data
+  const { frontmatter, html } = content
   const { title } = frontmatter
+
   return (
-    <Container>
-      <div className="blog-post">
+    <SiteWrapper data={site}>
+      <Container className="blog-post">
         <h1>{title}</h1>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
-    </Container>
+      </Container>
+    </SiteWrapper>
   )
 }
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(fields: { slug: { eq: $path } }) {
+    site: markdownRemark(frontmatter: { type: { eq: "index" } }) {
+      html
+      frontmatter {
+        title
+        headline
+        subline
+      }
+    }
+    content: markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
         title

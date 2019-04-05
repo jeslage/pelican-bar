@@ -1,18 +1,18 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
+import React from 'react';
+import { graphql, Link } from 'gatsby';
 
-import styled from 'styled-components'
-import SiteWrapper from '../wrapper/siteWrapper'
+import styled from 'styled-components';
+import SiteWrapper from '../wrapper/siteWrapper';
 
 const Container = styled.div`
   background: #f4f4f4;
-`
+`;
 
 const IndexPage = ({ data }) => {
-  const { site, blogEntries, eventEntries } = data
-  const { frontmatter } = site
+  const { site, blogEntries, eventEntries } = data;
+  const { frontmatter } = site;
 
-  const { headline, subline } = frontmatter
+  const { headline, subline } = frontmatter;
 
   return (
     <SiteWrapper data={site}>
@@ -29,8 +29,8 @@ const IndexPage = ({ data }) => {
         ))}
       </Container>
     </SiteWrapper>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -42,10 +42,7 @@ export const pageQuery = graphql`
         subline
       }
     }
-    blogEntries: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "blog" } } }
-      limit: 1000
-    ) {
+    blogEntries: allMarkdownRemark(filter: { frontmatter: { type: { eq: "blog" } } }, limit: 1000) {
       edges {
         node {
           fields {
@@ -73,6 +70,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

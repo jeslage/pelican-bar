@@ -1,30 +1,26 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import styled from 'styled-components'
-import SiteWrapper from '../wrapper/siteWrapper'
+import styled from 'styled-components';
+import SiteWrapper from '../wrapper/siteWrapper';
 
 const Container = styled.div`
   background: papayawhip;
-`
+`;
 
 const BlogPost = ({ data }) => {
-  const { content, site } = data
-  const { frontmatter, html } = content
-  const { title } = frontmatter
-
+  const { site, content } = data;
+  const { frontmatter, html } = content;
+  const { title } = frontmatter;
   return (
     <SiteWrapper data={site}>
       <Container className="blog-post">
         <h1>{title}</h1>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
       </Container>
     </SiteWrapper>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -43,6 +39,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default BlogPost
+export default BlogPost;

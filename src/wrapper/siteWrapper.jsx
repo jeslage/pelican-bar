@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import React from 'react';
+import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const SiteWrapper = ({ data, children }) => {
-  const { frontmatter } = data
+  const { frontmatter } = data;
 
-  const { title } = frontmatter
+  const { title } = frontmatter;
 
   return (
     <div>
@@ -20,7 +20,7 @@ const SiteWrapper = ({ data, children }) => {
       </header>
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default SiteWrapper
+export default SiteWrapper;

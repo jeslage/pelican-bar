@@ -83,3 +83,4 @@ collections:
                     widget: 'string',
                   }
               }
+            }

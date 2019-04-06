@@ -10,6 +10,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "clean": "rimraf .cache public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
@@ -18,12 +19,13 @@
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-manifest": "^2.0.26",
     "gatsby-plugin-netlify-cms": "3.0.13",
-    "gatsby-plugin-netlify-cms-paths": "^1.2.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-plugin-styled-components": "^3.0.6",
+    "gatsby-remark-copy-linked-files": "^2.0.11",
     "gatsby-remark-images": "^3.0.10",
+    "gatsby-remark-relative-images": "^0.2.2",
     "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-remark": "^2.3.1",
     "gatsby-transformer-sharp": "^2.1.17",
@@ -37,6 +39,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3"
   }
 }

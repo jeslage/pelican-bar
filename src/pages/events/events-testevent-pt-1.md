@@ -1,7 +1,7 @@
 ---
 type: event
 date: 11.03.2019
-image: /assets/unnamed.jpg
+image: /images/unnamed.jpg
 title: Testevent Pt. 1
 ---
 

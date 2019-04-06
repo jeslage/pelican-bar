@@ -8,14 +8,19 @@ const EventPage = ({ data }) => {
   const { site, content } = data;
   const { frontmatter, html } = content;
   const { title, date, image } = frontmatter;
-
+  console.log(image);
   return (
     <DefaultTemplate data={site}>
       <div className="blog-post">
         <h1>{title}</h1>
         <p>{date}</p>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
-        {image && <Img fluid={image.childImageSharp.fluid} />}
+
+        {image && (
+          <div style={{ maxWidth: '700px' }}>
+            <Img fluid={image.childImageSharp.fluid} />
+          </div>
+        )}
       </div>
     </DefaultTemplate>
   );
@@ -39,7 +44,7 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             fluid(maxWidth: 700) {
-              src
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }

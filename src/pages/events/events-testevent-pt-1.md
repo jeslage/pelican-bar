@@ -1,6 +1,6 @@
 ---
 type: event
-date: 2019-03-11T21:56:14.300Z
+date: 11 03 2019
 title: Testevent Pt. 1
 ---
 Yup

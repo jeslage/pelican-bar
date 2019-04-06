@@ -11,11 +11,13 @@ const Container = styled.div`
 const BlogPost = ({ data }) => {
   const { site, content } = data;
   const { frontmatter, html } = content;
-  const { title } = frontmatter;
+  const { title, date } = frontmatter;
+
   return (
     <SiteWrapper data={site}>
       <Container className="blog-post">
         <h1>{title}</h1>
+        <p>{date}</p>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
       </Container>
     </SiteWrapper>
@@ -36,6 +38,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        date
       }
     }
   }

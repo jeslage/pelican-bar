@@ -17,13 +17,6 @@ const IndexPage = ({ data }) => {
   return (
     <SiteWrapper data={site}>
       <Container className="blog-post">
-        <a
-          href="https://www.opentable.com/r/la-casa-di-lucia-reservations-philadelphia?restref=412810&lang=en-US"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Reservieren
-        </a>
         <h1>{headline}</h1>
         <h1>{subline}</h1>
         <h2>BlogPosts</h2>

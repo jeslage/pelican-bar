@@ -17,6 +17,13 @@ const SiteWrapper = ({ data, children }) => {
         <h1>
           <Link to="/">{title}</Link>
         </h1>
+        <a
+          href="https://www.opentable.com/r/la-casa-di-lucia-reservations-philadelphia?restref=412810&lang=en-US"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reservieren
+        </a>
       </header>
       {children}
     </div>

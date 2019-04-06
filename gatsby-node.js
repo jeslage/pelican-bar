@@ -29,7 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
       if (node.frontmatter.type !== 'settings') {
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`src/templates/${String(node.frontmatter.type)}.jsx`),
+          component: path.resolve(`src/components/pages/${String(node.frontmatter.type)}.jsx`),
           context: {} // additional data can be passed via context
         });
       }

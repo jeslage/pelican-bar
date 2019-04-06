@@ -1,12 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-import styled from 'styled-components';
-import SiteWrapper from '../wrapper/siteWrapper';
-
-const Container = styled.div`
-  background: #f4f4f4;
-`;
+import DefaultTemplate from '../templates/default/default';
 
 const IndexPage = ({ data }) => {
   const { site, blogEntries, eventEntries } = data;
@@ -15,20 +10,23 @@ const IndexPage = ({ data }) => {
   const { headline, subline } = frontmatter;
 
   return (
-    <SiteWrapper data={site}>
-      <Container className="blog-post">
+    <DefaultTemplate data={site}>
+      <div className="blog-post">
         <h1>{headline}</h1>
-        <h1>{subline}</h1>
-        <h2>BlogPosts</h2>
+        <h2>{subline}</h2>
+        <h3>BlogPosts</h3>
         {blogEntries.edges.map(({ node }) => (
           <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
         ))}
-        <h2>Events</h2>
+        <h3>Events</h3>
         {eventEntries.edges.map(({ node }) => (
-          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+          <Link to={node.fields.slug}>
+            <time>{node.frontmatter.date}</time>
+            <p>{node.frontmatter.title}</p>
+          </Link>
         ))}
-      </Container>
-    </SiteWrapper>
+      </div>
+    </DefaultTemplate>
   );
 };
 
@@ -65,6 +63,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date
           }
         }
       }

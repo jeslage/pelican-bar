@@ -1,26 +1,21 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import styled from 'styled-components';
-import SiteWrapper from '../wrapper/siteWrapper';
+import DefaultTemplate from '../templates/default/default';
 
-const Container = styled.div`
-  background: papayawhip;
-`;
-
-const BlogPost = ({ data }) => {
+const EventPage = ({ data }) => {
   const { site, content } = data;
   const { frontmatter, html } = content;
   const { title, date } = frontmatter;
 
   return (
-    <SiteWrapper data={site}>
-      <Container className="blog-post">
+    <DefaultTemplate data={site}>
+      <div className="blog-post">
         <h1>{title}</h1>
         <p>{date}</p>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
-      </Container>
-    </SiteWrapper>
+      </div>
+    </DefaultTemplate>
   );
 };
 
@@ -44,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default BlogPost;
+export default EventPage;

@@ -23,12 +23,12 @@ const queryEventEntries = () => {
   `);
 
   const data = eventEntries.edges.map(({ node }) => {
-    const item = {
+    const event = {
       slug: node.fields.slug,
       title: node.frontmatter.title,
       date: node.frontmatter.date
     };
-    return item;
+    return event;
   });
 
   return data;

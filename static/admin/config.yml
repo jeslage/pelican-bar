@@ -48,6 +48,38 @@ collections:
   - name: 'settings'
     label: 'Settings'
     files:
+      - file: 'src/pages/settings/general.md'
+        label: 'General'
+        name: 'general'
+        delete: false
+        fields:
+          - { label: 'Type', name: 'type', widget: 'hidden', default: 'general' }
+          - label: 'Globals'
+            name: 'globals'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Title',
+                  name: 'title',
+                  widget: 'string',
+                  hint: 'Title of the website',
+                  required: true,
+                }
+              - { label: 'Instagram', name: 'instagram', widget: 'string' }
+              - { label: 'Facebook', name: 'facebook', widget: 'string' }
+          - label: 'SEO'
+            name: 'seo'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string', hint: 'Title for SEO' }
+              - { label: 'Description', name: 'description', widget: 'text' }
+              - {
+                  label: 'Keywords',
+                  name: 'keywords',
+                  hint: 'Separate keywords with a comma e.g. Bar, Drinks',
+                  widget: 'string',
+                }
+
       - file: 'src/pages/settings/seo.md'
         label: 'SEO'
         name: 'seo'

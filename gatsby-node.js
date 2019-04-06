@@ -27,7 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      if (node.frontmatter.type !== 'seo') {
+      if (node.frontmatter.type !== 'seo' || node.frontmatter.type !== 'general') {
         createPage({
           path: node.fields.slug,
           component: path.resolve(`src/components/pages/${String(node.frontmatter.type)}.jsx`),

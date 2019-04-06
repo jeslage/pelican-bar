@@ -23,12 +23,12 @@ const queryBlogEntries = () => {
   `);
 
   const data = blogEntries.edges.map(({ node }) => {
-    const item = {
+    const blogPost = {
       slug: node.fields.slug,
       title: node.frontmatter.title,
       date: node.frontmatter.date
     };
-    return item;
+    return blogPost;
   });
 
   return data;

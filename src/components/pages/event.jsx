@@ -17,7 +17,7 @@ const EventPage = ({ data }) => {
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
 
         {image && (
-          <div style={{ maxWidth: '700px' }}>
+          <div style={{ maxWidth: '700px', backgroundColor: 'lightgray' }}>
             <Img fluid={image.childImageSharp.fluid} />
           </div>
         )}

@@ -16,7 +16,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - { name: 'type', label: 'Type', widget: 'hidden', default: 'blog' }
-      - { name: 'date', label: 'Date', widget: 'date' }
+      - { name: 'date', label: 'Date', widget: 'date', default: '', format: 'DD.MM.YYYY' }
       - { name: 'title', label: 'Title' }
       - { name: 'body', label: 'Body', widget: 'markdown' }
 
@@ -53,7 +53,7 @@ collections:
         name: 'seo'
         delete: false
         fields:
-          - { label: 'Type', name: 'type', widget: 'hidden', default: 'settings' }
+          - { label: 'Type', name: 'type', widget: 'hidden', default: 'seo' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'text' }
           - {

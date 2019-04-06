@@ -9,11 +9,10 @@ const BlogPage = ({ data }) => {
   const { title } = frontmatter;
 
   return (
-    <DefaultTemplate data={site}>
-      <div className="blog-post">
-        <h1>{title}</h1>
-        <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
+    <DefaultTemplate siteData={site}>
+      <h1>{title}</h1>
+
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </DefaultTemplate>
   );
 };

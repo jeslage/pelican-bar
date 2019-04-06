@@ -1,25 +1,50 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import querySeoData from '../../../query/querySeoData';
+
+import GlobalStyle from '../../../stylesheets/global';
+
 import Header from '../../organisms/header/header';
 import Footer from '../../organisms/footer/footer';
 
-const DefaultTemplate = ({ data, children }) => {
+const DefaultTemplate = ({ siteData, children }) => {
   const {
     frontmatter: { title }
-  } = data;
+  } = siteData;
+
+  const { seoTitle, seoDescription, seoKeywords } = querySeoData();
 
   return (
-    <div>
+    <main>
       <Helmet>
-        <html lang="en" />
+        <html lang="de" />
         <title>{title}</title>
+        <meta name="title" content={seoTitle} />
+        <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={seoKeywords} />
       </Helmet>
+      <GlobalStyle />
+
       <Header title={title} />
-      {children}
+
+      <section>{children}</section>
+
       <Footer />
-    </div>
+    </main>
   );
 };
+
+export const pageQuery = graphql`
+  query {
+    opentable: allFile(filter: { name: { eq: "opentable" } }) {
+      edges {
+        node {
+          publicURL
+        }
+      }
+    }
+  }
+`;
 
 export default DefaultTemplate;

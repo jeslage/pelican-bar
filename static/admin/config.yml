@@ -83,18 +83,3 @@ collections:
                     widget: 'string',
                   }
               }
-
-      - file: 'src/pages/settings/seo.md'
-        label: 'SEO'
-        name: 'seo'
-        delete: false
-        fields:
-          - { label: 'Type', name: 'type', widget: 'hidden', default: 'seo' }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'text' }
-          - {
-              label: 'Keywords',
-              name: 'keywords',
-              hint: 'Separate keywords with a comma e.g. Bar, Drinks',
-              widget: 'string',
-            }

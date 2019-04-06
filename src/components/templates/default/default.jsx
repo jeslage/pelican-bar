@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import StyledTemplate from './default.style';
 
-import querySeoData from '../../../query/querySeoData';
+import queryGeneralData from '../../../query/queryGeneralData';
 
 import GlobalStyle from '../../../stylesheets/global';
 
@@ -14,16 +14,16 @@ const DefaultTemplate = ({ siteData, children }) => {
     frontmatter: { title }
   } = siteData;
 
-  const { seoTitle, seoDescription, seoKeywords } = querySeoData();
+  const { seo } = queryGeneralData();
 
   return (
     <StyledTemplate>
       <Helmet>
         <html lang="de" />
         <title>{title}</title>
-        <meta name="title" content={seoTitle} />
-        <meta name="description" content={seoDescription} />
-        <meta name="keywords" content={seoKeywords} />
+        <meta name="title" content={seo.title} />
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
       </Helmet>
       <GlobalStyle />
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledFooter = styled.header`
-  border-top: 2px solid black;
+  border-top: 5px solid black;
   padding: 20px;
 `;
 

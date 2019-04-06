@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import StyledTemplate from './default.style';
 
 import querySeoData from '../../../query/querySeoData';
 
@@ -16,7 +17,7 @@ const DefaultTemplate = ({ siteData, children }) => {
   const { seoTitle, seoDescription, seoKeywords } = querySeoData();
 
   return (
-    <main>
+    <StyledTemplate>
       <Helmet>
         <html lang="de" />
         <title>{title}</title>
@@ -31,7 +32,7 @@ const DefaultTemplate = ({ siteData, children }) => {
       <section>{children}</section>
 
       <Footer />
-    </main>
+    </StyledTemplate>
   );
 };
 

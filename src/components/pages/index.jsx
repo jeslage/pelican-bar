@@ -16,25 +16,23 @@ const IndexPage = ({ data }) => {
 
   return (
     <DefaultTemplate siteData={site}>
-      <div className="blog-post">
-        <h1>{headline}</h1>
-        <h2>{subline}</h2>
+      <h1>{headline}</h1>
+      <h2>{subline}</h2>
 
-        <h4>BlogPosts</h4>
-        {blogEntries.map(({ node }) => (
-          <Link to={node.fields.slug} key={node.frontmatter.title}>
-            {node.frontmatter.title}
-          </Link>
-        ))}
+      <h4>BlogPosts</h4>
+      {blogEntries.map(({ slug, title }) => (
+        <Link to={slug} key={title}>
+          {title}
+        </Link>
+      ))}
 
-        <h4>Events</h4>
-        {eventEntries.map(({ node }) => (
-          <Link to={node.fields.slug} key={node.frontmatter.title}>
-            <time>{node.frontmatter.date}</time>
-            <p>{node.frontmatter.title}</p>
-          </Link>
-        ))}
-      </div>
+      <h4>Events</h4>
+      {eventEntries.map(({ slug, title, date }) => (
+        <Link to={slug} key={title}>
+          <time>{date}</time>
+          <p>{title}</p>
+        </Link>
+      ))}
     </DefaultTemplate>
   );
 };

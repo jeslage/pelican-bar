@@ -22,7 +22,16 @@ const queryEventEntries = () => {
     }
   `);
 
-  return eventEntries.edges;
+  const data = eventEntries.edges.map(({ node }) => {
+    const item = {
+      slug: node.fields.slug,
+      title: node.frontmatter.title,
+      date: node.frontmatter.date
+    };
+    return item;
+  });
+
+  return data;
 };
 
 export default queryEventEntries;

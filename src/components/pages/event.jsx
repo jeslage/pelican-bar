@@ -1,12 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import DefaultTemplate from '../templates/default/default';
 
 const EventPage = ({ data }) => {
   const { site, content } = data;
   const { frontmatter, html } = content;
-  const { title, date } = frontmatter;
+  const { title, date, image } = frontmatter;
 
   return (
     <DefaultTemplate data={site}>
@@ -14,6 +15,7 @@ const EventPage = ({ data }) => {
         <h1>{title}</h1>
         <p>{date}</p>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
+        {image && <Img fluid={image.childImageSharp.fluid} />}
       </div>
     </DefaultTemplate>
   );
@@ -34,6 +36,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
+        image {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              src
+            }
+          }
+        }
       }
     }
   }

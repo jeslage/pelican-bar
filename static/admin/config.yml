@@ -28,6 +28,7 @@ collections:
     fields:
       - { name: 'type', label: 'Type', widget: 'hidden', default: 'event' }
       - { name: 'date', label: 'Date', widget: 'date', default: '', format: 'DD.MM.YYYY' }
+      - { name: 'image', label: 'Image', widget: 'image' }
       - { name: 'title', label: 'Title' }
       - { name: 'body', label: 'Body', widget: 'markdown' }
 

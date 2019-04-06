@@ -27,7 +27,7 @@ collections:
     slug: 'events/{{slug}}'
     fields:
       - { name: 'type', label: 'Type', widget: 'hidden', default: 'event' }
-      - { name: 'date', label: 'Date', widget: 'date', default: '', format: 'DD MM YYYY' }
+      - { name: 'date', label: 'Date', widget: 'date', default: '', format: 'DD.MM.YYYY' }
       - { name: 'title', label: 'Title' }
       - { name: 'body', label: 'Body', widget: 'markdown' }
 

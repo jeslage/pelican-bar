@@ -1,38 +1,34 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import StyledTemplate from './default.style';
 
 import queryGeneralData from '../../../query/queryGeneralData';
 
 import GlobalStyle from '../../../stylesheets/global';
 
+import StyledDefaultLayout from './default.style';
 import Header from '../../organisms/header/header';
 import Footer from '../../organisms/footer/footer';
 
-const DefaultTemplate = ({ siteData, children }) => {
-  const {
-    frontmatter: { title }
-  } = siteData;
-
-  const { seo } = queryGeneralData();
+const DefaultLayout = ({ children }) => {
+  const { globals, seo } = queryGeneralData();
 
   return (
-    <StyledTemplate>
+    <StyledDefaultLayout>
       <Helmet>
         <html lang="de" />
-        <title>{title}</title>
-        <meta name="title" content={seo.title} />
-        <meta name="description" content={seo.description} />
-        <meta name="keywords" content={seo.keywords} />
+        <title>{globals.title}</title>
+        {seo.title && <meta name="title" content={seo.title} />}
+        {seo.description && <meta name="description" content={seo.description} />}
+        {seo.keywords && <meta name="keywords" content={seo.keywords} />}
       </Helmet>
       <GlobalStyle />
 
-      <Header title={title} />
+      <Header title={globals.title} />
 
       <section>{children}</section>
 
       <Footer />
-    </StyledTemplate>
+    </StyledDefaultLayout>
   );
 };
 
@@ -48,4 +44,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default DefaultTemplate;
+export default DefaultLayout;

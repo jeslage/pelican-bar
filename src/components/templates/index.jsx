@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 import queryEventEntries from '../../query/queryEventEntries';
 import queryBlogEntries from '../../query/queryBlogEntries';
 
-import DefaultTemplate from '../templates/default/default';
+import DefaultLayout from '../layouts/default/default';
 
 const IndexPage = ({ data }) => {
   const { site } = data;
@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   const blogEntries = queryBlogEntries();
 
   return (
-    <DefaultTemplate siteData={site}>
+    <DefaultLayout>
       <h1>{headline}</h1>
       <h2>{subline}</h2>
 
@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
           <p>{title}</p>
         </Link>
       ))}
-    </DefaultTemplate>
+    </DefaultLayout>
   );
 };
 

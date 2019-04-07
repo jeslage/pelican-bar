@@ -30,12 +30,11 @@ module.exports = {
         start_url: '/',
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
-        display: 'standalone'
-        // icon: `src/images/icon.png`, // This path is relative to the root of the site.
-        // include_favicon: true // Include favicon
+        display: 'standalone',
+        icon: `static/icon.png`, // This path is relative to the root of the site.
+        include_favicon: true // Include favicon
       }
     },
-    'gatsby-plugin-remove-serviceworker', // Can be deleted later
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-remark-images',
@@ -54,11 +53,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 1080,
-              backgroundColor: 'transparent' // required to display blurred image first
+              maxWidth: 1120,
+              backgroundColor: 'transparent'
             }
           },
           {

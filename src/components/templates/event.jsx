@@ -2,15 +2,15 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import DefaultTemplate from '../templates/default/default';
+import DefaultLayout from '../layouts/default/default';
 
 const EventPage = ({ data }) => {
-  const { site, content } = data;
+  const { content } = data;
   const { frontmatter, html } = content;
   const { title, date, image } = frontmatter;
 
   return (
-    <DefaultTemplate siteData={site}>
+    <DefaultLayout>
       <h1>{title}</h1>
       <p>{date}</p>
 
@@ -21,20 +21,12 @@ const EventPage = ({ data }) => {
           <Img fluid={image.childImageSharp.fluid} />
         </div>
       )}
-    </DefaultTemplate>
+    </DefaultLayout>
   );
 };
 
 export const pageQuery = graphql`
   query($path: String!) {
-    site: markdownRemark(frontmatter: { type: { eq: "index" } }) {
-      html
-      frontmatter {
-        title
-        headline
-        subline
-      }
-    }
     content: markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {

@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
 export const pageQuery = graphql`
   query($path: String!) {
     site: markdownRemark(fields: { slug: { eq: $path } }) {
-      
+      html
     }
   }
 `;

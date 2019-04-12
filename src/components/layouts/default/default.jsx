@@ -7,7 +7,6 @@ import GlobalStyle from '../../../stylesheets/global';
 
 import StyledDefaultLayout from './default.style';
 import Header from '../../organisms/header/header';
-import Footer from '../../organisms/footer/footer';
 
 const DefaultLayout = ({ children }) => {
   const { globals, seo } = queryGeneralData();
@@ -22,12 +21,8 @@ const DefaultLayout = ({ children }) => {
         {seo.keywords && <meta name="keywords" content={seo.keywords} />}
       </Helmet>
       <GlobalStyle />
-
       <Header title={globals.title} />
-
-      <section>{children}</section>
-
-      <Footer />
+      <section>{children}</section>{' '}
     </StyledDefaultLayout>
   );
 };

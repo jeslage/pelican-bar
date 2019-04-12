@@ -41,9 +41,18 @@ collections:
         delete: false
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Headline', name: 'headline', widget: 'string' }
-          - { label: 'Subline', name: 'subline', widget: 'string' }
+          - label: 'Bar'
+            name: 'bar'
+            widget: 'object'
+            fields:
+              - { label: 'Description', name: 'description', widget: 'markdown' }
+          - label: 'Contact'
+            name: 'contact'
+            widget: 'object'
+            fields:
+              - { label: 'Opening Hours', name: 'openingHours', widget: 'markdown' }
+              - { label: 'Route', name: 'route', widget: 'markdown' }
+              - { label: 'Contact', name: 'contact', widget: 'markdown' }
 
   - name: 'settings'
     label: 'Settings'

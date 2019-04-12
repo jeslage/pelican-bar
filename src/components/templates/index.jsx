@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
   const { site } = data;
   // const { frontmatter } = site;
   // const { contact, bar } = frontmatter;
-  // console.log(html);
+
   const eventEntries = queryEventEntries();
   const blogEntries = queryBlogEntries();
 

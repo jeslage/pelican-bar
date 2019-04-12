@@ -45,14 +45,14 @@ collections:
             name: 'bar'
             widget: 'object'
             fields:
-              - { label: 'Description', name: 'description', widget: 'text' }
+              - { label: 'Description', name: 'description', widget: 'markdown' }
           - label: 'Contact'
             name: 'contact'
             widget: 'object'
             fields:
-              - { label: 'Opening Hours', name: 'openingHours', widget: 'text' }
-              - { label: 'Route', name: 'route', widget: 'text' }
-              - { label: 'Contact', name: 'contact', widget: 'text' }
+              - { label: 'Opening Hours', name: 'openingHours', widget: 'markdown' }
+              - { label: 'Route', name: 'route', widget: 'markdown' }
+              - { label: 'Contact', name: 'contact', widget: 'markdown' }
 
   - name: 'settings'
     label: 'Settings'

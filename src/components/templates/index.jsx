@@ -10,10 +10,10 @@ import Box from '../atoms/box/box';
 import DefaultLayout from '../layouts/default/default';
 
 const IndexPage = ({ data }) => {
-  const { site, html } = data;
-  const { frontmatter } = site;
-  const { contact, bar } = frontmatter;
-  console.log(html);
+  const { site } = data;
+  // const { frontmatter } = site;
+  // const { contact, bar } = frontmatter;
+  // console.log(html);
   const eventEntries = queryEventEntries();
   const blogEntries = queryBlogEntries();
 
@@ -30,7 +30,6 @@ const IndexPage = ({ data }) => {
       </Row>
       <Row headline="Bar">
         <Box background="lightpink" />
-        <p>{bar.description}</p>
 
         {blogEntries.map(({ slug, title }) => (
           <Link to={slug} key={title}>
@@ -39,7 +38,6 @@ const IndexPage = ({ data }) => {
         ))}
       </Row>
       <Row headline="Kontakt">
-        <p>{contact.openingHours}</p>
         <h4>Events</h4>
 
         {eventEntries.map(({ slug, title, date }) => (
@@ -56,17 +54,7 @@ const IndexPage = ({ data }) => {
 export const pageQuery = graphql`
   query($path: String!) {
     site: markdownRemark(fields: { slug: { eq: $path } }) {
-      html
-      frontmatter {
-        contact {
-          contact
-          openingHours
-          route
-        }
-        bar {
-          description
-        }
-      }
+      
     }
   }
 `;

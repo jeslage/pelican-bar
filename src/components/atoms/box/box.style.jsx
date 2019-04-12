@@ -4,7 +4,7 @@ const StyledBox = styled.div`
   width: 100%;
   height: 300px;
   background: lightgreen;
-  border-top: 5px solid #000;
+  border-top: ${props => (!props.noTopBorder ? '5px solid #000' : '')};
   border-bottom: 5px solid #000;
 
   ${props =>

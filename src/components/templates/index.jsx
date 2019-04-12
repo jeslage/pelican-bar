@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
   return (
     <DefaultLayout>
       <Row headline="Vibes">
-        <Box />
+        <Box noTopBorder />
         <div className="content">
           {blogEntries.map(({ slug, title }) => (
             <Link to={slug} key={title}>
@@ -32,8 +32,15 @@ const IndexPage = ({ data }) => {
         <Box background="purple" size="s" />
       </Row>
       <Row headline="Bar">
-        <Box background="lightpink" />
+        <Box background="lightpink" noTopBorder />
         <div className="content">
+          <ReactMarkdown source={bar.description} />
+          <ReactMarkdown source={bar.description} />
+
+          <ReactMarkdown source={bar.description} />
+
+          <ReactMarkdown source={bar.description} />
+
           <ReactMarkdown source={bar.description} />
 
           {blogEntries.map(({ slug, title }) => (

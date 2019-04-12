@@ -1,14 +1,19 @@
 import styled from 'styled-components';
+import { mq } from '../../../stylesheets/tools/index';
 
 const StyledRow = styled.div`
-  display: inline-block;
   position: relative;
-  height: 100vh;
-  width: 33.33%;
+  width: 100%;
 
-  &:nth-of-type(2) {
-    border-right: 5px solid #000;
-    border-left: 5px solid #000;
+  ${mq('m')} {
+    display: inline-block;
+    height: 100vh;
+    width: 33.33%;
+
+    &:nth-of-type(2) {
+      border-right: 5px solid #000;
+      border-left: 5px solid #000;
+    }
   }
 
   h3 {
@@ -19,8 +24,10 @@ const StyledRow = styled.div`
   }
 
   .wrapper {
-    height: calc(100% - 68px);
-    overflow-x: auto;
+    ${mq('m')} {
+      height: calc(100% - 68px);
+      overflow-x: auto;
+    }
   }
 
   .content {

@@ -18,9 +18,13 @@ const StyledRow = styled.div`
     font-size: 20px;
   }
 
-  .content {
+  .wrapper {
     height: calc(100% - 68px);
     overflow-x: auto;
+  }
+
+  .content {
+    padding: 20px;
   }
 `;
 

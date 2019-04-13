@@ -32,15 +32,8 @@ const IndexPage = ({ data }) => {
         <Box background="purple" size="s" />
       </Row>
       <Row headline="Bar">
-        <Box background="lightpink" noTopBorder />
+        <Box background="salmon" noTopBorder />
         <div className="content">
-          <ReactMarkdown source={bar.description} />
-          <ReactMarkdown source={bar.description} />
-
-          <ReactMarkdown source={bar.description} />
-
-          <ReactMarkdown source={bar.description} />
-
           <ReactMarkdown source={bar.description} />
 
           {blogEntries.map(({ slug, title }) => (

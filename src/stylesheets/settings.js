@@ -2,7 +2,11 @@ const colors = {
   white: '#fff',
   black: '#000',
   gray: '#e8e8e8',
-  lightGray: '#f4f4f4'
+  lightGray: '#f4f4f4',
+  purple: '#725484',
+  yellow: '#d4b248',
+  green: '#77b8b5',
+  salmon: '#e8bcb1'
 };
 
 // Breakpoints

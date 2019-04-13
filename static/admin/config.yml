@@ -41,6 +41,12 @@ collections:
         delete: false
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
+          - label: 'Hero'
+            name: 'hero'
+            widget: 'object'
+            fields:
+              - { name: 'image', label: 'Image', widget: 'image' }
+              - { name: 'text', label: 'Text', widget: 'text' }
           - label: 'Bar'
             name: 'bar'
             widget: 'object'

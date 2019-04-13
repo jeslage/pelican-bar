@@ -1,16 +1,17 @@
 import styled, { css } from 'styled-components';
+import { getColor } from '../../../stylesheets/tools/index';
 
 const StyledBox = styled.div`
   width: 100%;
   height: 300px;
-  background: lightgreen;
+  background: ${getColor('green')};
   border-top: ${props => (!props.noTopBorder ? '5px solid #000' : '')};
   border-bottom: 5px solid #000;
 
   ${props =>
     props.background &&
     css`
-      background: ${props.background};
+      background: ${getColor(props.background)};
     `}
 
   ${props =>

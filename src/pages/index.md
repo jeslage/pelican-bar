@@ -1,5 +1,8 @@
 ---
 type: index
+hero:
+  image: /images/cocktail.jpg
+  text: The most fly bar in Hamburg
 bar:
   description: >-
     Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den

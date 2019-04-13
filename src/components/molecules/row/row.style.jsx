@@ -4,6 +4,7 @@ import { mq } from '../../../stylesheets/tools/index';
 const StyledRow = styled.div`
   position: relative;
   width: 100%;
+  border-top: 5px solid #000;
 
   ${mq('m')} {
     display: inline-block;

@@ -1,27 +1,31 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
+import Img from 'gatsby-image';
 
 import queryEventEntries from '../../query/queryEventEntries';
 import queryBlogEntries from '../../query/queryBlogEntries';
 
 import Row from '../molecules/row/row';
 import Box from '../atoms/box/box';
+import Hero from '../organisms/hero/hero';
 
 import DefaultLayout from '../layouts/default/default';
 
 const IndexPage = ({ data }) => {
   const { site } = data;
   const { frontmatter } = site;
-  const { contact, bar } = frontmatter;
+  const { contact, bar, hero } = frontmatter;
 
   const eventEntries = queryEventEntries();
   const blogEntries = queryBlogEntries();
 
   return (
     <DefaultLayout>
+      <Hero image={hero.image} />
       <Row headline="Vibes">
         <Box noTopBorder />
+
         <div className="content">
           {blogEntries.map(({ slug, title }) => (
             <Link to={slug} key={title}>
@@ -72,6 +76,10 @@ export const pageQuery = graphql`
   query($path: String!) {
     site: markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
+        hero {
+          image
+          text
+        }
         contact {
           contact
           openingHours

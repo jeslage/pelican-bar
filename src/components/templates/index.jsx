@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
-import Img from 'gatsby-image';
 
 import queryEventEntries from '../../query/queryEventEntries';
 import queryBlogEntries from '../../query/queryBlogEntries';
@@ -38,6 +37,10 @@ const IndexPage = ({ data }) => {
       <Row headline="Bar">
         <Box background="salmon" noTopBorder />
         <div className="content">
+          <ReactMarkdown source={bar.description} />
+          <ReactMarkdown source={bar.description} />
+          <ReactMarkdown source={bar.description} />
+          <ReactMarkdown source={bar.description} />
           <ReactMarkdown source={bar.description} />
 
           {blogEntries.map(({ slug, title }) => (
@@ -77,7 +80,13 @@ export const pageQuery = graphql`
     site: markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
         hero {
-          image
+          image {
+            childImageSharp {
+              fixed(width: 1440, quality: 100) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
+              }
+            }
+          }
           text
         }
         contact {

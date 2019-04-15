@@ -1,10 +1,11 @@
 import React from 'react';
+import Image from 'gatsby-image';
 
 import StyledHero from './hero.style';
 
 const Hero = ({ image }) => (
   <StyledHero>
-    <img src={image} />
+    <Image fixed={image.childImageSharp.fixed} />
   </StyledHero>
 );
 

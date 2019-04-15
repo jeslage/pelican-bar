@@ -5,10 +5,8 @@ const StyledHero = styled.section`
   width: 100%;
   overflow: hidden;
 
-  img {
+  .gatsby-image-wrapper {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 `;
 

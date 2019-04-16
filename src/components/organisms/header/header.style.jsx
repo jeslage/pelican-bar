@@ -8,7 +8,21 @@ const StyledHeader = styled.header`
   background: #fff;
   z-index: 1;
   border-bottom: 5px solid black;
-  padding: 20px;
+  padding: 0px 20px;
+  display: flex;
+
+  a {
+    display: block;
+  }
+
+  .header__signet {
+    flex-grow: 2;
+    text-align: right;
+  }
+
+  svg {
+    height: 50px;
+  }
 `;
 
 export default StyledHeader;

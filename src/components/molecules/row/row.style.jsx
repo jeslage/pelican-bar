@@ -8,7 +8,7 @@ const StyledRow = styled.div`
 
   ${mq('m')} {
     display: inline-block;
-    height: 100vh;
+    height: calc(100vh - 54px);
     width: 33.33%;
 
     &:nth-of-type(2) {

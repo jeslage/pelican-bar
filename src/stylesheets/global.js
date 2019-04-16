@@ -1,16 +1,32 @@
 import { createGlobalStyle } from 'styled-components';
 import { btnReset } from './tools/index';
+import { LemurMediumWoff, LemurMediumWoff2, PelicanSansWoff, PelicanSansWoff2 } from './fonts';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Lemur Medium';
+    src: local("Lemur Medium"), local("lemur-medium-webfont"), url(${LemurMediumWoff}) format("woff"), url(${LemurMediumWoff2}) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Pelican Sans';
+    src: local("Pelican Sans"), local("pelican-sans-beta-italic-webfont"), url(${PelicanSansWoff}) format("woff"), url(${PelicanSansWoff2}) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
   * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
   html {
     text-size-adjust: 100%;
     text-rendering: optimizeSpeed;
   }
-
+  
   body {
-    font-family: Arial;
+    font-family: "Lemur Medium", Arial, sans-serif;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;

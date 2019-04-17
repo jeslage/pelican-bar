@@ -11,7 +11,10 @@ bar:
     ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle
     von ruhigem Dasein versunken, daß meine Kunst darunter leidet. Ich könnte
     jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler
-    gewesen als in diesen Augenblicken.
+    gewesen als in diesen Augenblicken. Ich bin so glücklich, mein Bester, so
+    ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter
+    leidet. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein
+    größerer Maler gewesen als in diesen Augenblicken.
 contact:
   contact: |-
     Kontakt
@@ -33,3 +36,4 @@ contact:
     Mit dem Bus:\
     Test
 ---
+

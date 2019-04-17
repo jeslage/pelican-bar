@@ -24,6 +24,10 @@ const StyledRow = styled.div`
     font-size: 20px;
   }
 
+  p {
+    font-size: 20px;
+  }
+
   .wrapper {
     ${mq('m')} {
       height: calc(100% - 68px);
@@ -32,7 +36,7 @@ const StyledRow = styled.div`
   }
 
   .content {
-    padding: 20px;
+    padding: 25px;
   }
 `;
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mq } from '../../../stylesheets/tools/index';
 
 const StyledHero = styled.section`
   position: relative;
@@ -17,10 +18,15 @@ const StyledHero = styled.section`
     left: 50%;
     transform: translate(-50%, -85%);
     font-family: 'Pelican Sans', sans-serif;
-    font-size: 100px;
+    font-size: 15vw;
     line-height: 1;
     text-align: center;
     color: #fff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
+
+    ${mq('l')} {
+      font-size: 8vw;
+    }
   }
 `;
 

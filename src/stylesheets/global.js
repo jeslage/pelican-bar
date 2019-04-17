@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     src: local("Lemur Medium"), local("lemur-medium-webfont"), url(${LemurMediumWoff}) format("woff"), url(${LemurMediumWoff2}) format("woff2");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -15,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     src: local("Pelican Sans"), local("pelican-sans-beta-italic-webfont"), url(${PelicanSansWoff}) format("woff"), url(${PelicanSansWoff2}) format("woff2");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 
   * { -webkit-tap-highlight-color: rgba(0,0,0,0); }

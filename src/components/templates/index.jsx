@@ -2,9 +2,10 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 
-import Row from '../molecules/row/row';
-import Box from '../atoms/box/box';
-import Hero from '../organisms/hero/hero';
+import RowMolecule from '../molecules/row/row';
+import BoxAtom from '../atoms/box/box';
+import LinkAtom from '../atoms/link/link';
+import HeroOrganism from '../organisms/hero/hero';
 
 import DefaultLayout from '../layouts/default/default';
 
@@ -13,31 +14,52 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = site;
   const { contact, bar, hero } = frontmatter;
 
-  return (
-    <DefaultLayout>
-      <Hero image={hero.image} />
-      <Row headline="Vibes">
-        <Box noTopBorder />
+  const verticalHeader = true;
 
-        <Box background="purple" size="s" />
-      </Row>
-      <Row headline="Bar">
-        <Box background="salmon" noTopBorder />
+  return (
+    <DefaultLayout verticalHeader={verticalHeader}>
+      {!verticalHeader && <HeroOrganism {...hero} />}
+      <RowMolecule headline="Vibes">
+        <BoxAtom background="green" size="s" noTopBorder />
+        <ReactMarkdown source={bar.description} />
+        <BoxAtom background="purple" size="s" />
+      </RowMolecule>
+      <RowMolecule headline="Bar">
+        <BoxAtom hasPattern noTopBorder />
         <div className="content">
           <ReactMarkdown source={bar.description} />
         </div>
-      </Row>
-      <Row headline="Kontakt">
+      </RowMolecule>
+      <RowMolecule headline="Kontakt">
+        <BoxAtom background="purple" size="l" noTopBorder />
+
         <div className="content">
           <ReactMarkdown source={contact.openingHours} />
         </div>
+
+        <BoxAtom hasPattern size="s" />
+
         <div className="content">
           <ReactMarkdown source={contact.route} />
         </div>
+
+        <BoxAtom background="salmon" size="l" />
+
+        <div className="content">
+          <LinkAtom
+            href="https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE"
+            target="_blank"
+          >
+            Reservieren
+          </LinkAtom>
+        </div>
+
+        <BoxAtom hasPattern size="s" />
+
         <div className="content">
           <ReactMarkdown source={contact.contact} />
         </div>
-      </Row>
+      </RowMolecule>
     </DefaultLayout>
   );
 };
@@ -54,7 +76,7 @@ export const pageQuery = graphql`
               }
             }
           }
-          text
+          headline
         }
         contact {
           contact

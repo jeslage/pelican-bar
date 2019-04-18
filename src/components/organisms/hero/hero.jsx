@@ -3,11 +3,11 @@ import Img from 'gatsby-image';
 
 import StyledHero from './hero.style';
 
-const Hero = ({ image }) => (
+const Hero = ({ image, headline }) => (
   <StyledHero>
     <Img fluid={image.childImageSharp.fluid} />
 
-    <h1>The most fly bar in Hamburg</h1>
+    {headline && <h1>{headline}</h1>}
   </StyledHero>
 );
 

@@ -8,7 +8,7 @@ const StyledRow = styled.div`
 
   ${mq('m')} {
     display: inline-block;
-    height: calc(100vh - 54px);
+    height: 100vh;
     width: 33.33%;
 
     &:nth-of-type(2) {
@@ -30,7 +30,7 @@ const StyledRow = styled.div`
 
   .wrapper {
     ${mq('m')} {
-      height: calc(100% - 68px);
+      height: 100vh;
       overflow-x: auto;
     }
   }

@@ -46,7 +46,7 @@ collections:
             widget: 'object'
             fields:
               - { name: 'image', label: 'Image', widget: 'image' }
-              - { name: 'text', label: 'Text', widget: 'text' }
+              - { name: 'headline', label: 'Headline', widget: 'text' }
           - label: 'Bar'
             name: 'bar'
             widget: 'object'

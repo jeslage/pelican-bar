@@ -4,6 +4,6 @@ headline: Impressum
 ---
 Testdaten sind die Besten!
 
-dividerBox yellow true
+dividerBox green false
 
 Testdaten sind die Besten!

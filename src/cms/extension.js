@@ -1,3 +1,4 @@
+/* eslint-disable */
 import CMS from 'netlify-cms';
 
 CMS.registerEditorComponent({
@@ -25,12 +26,11 @@ CMS.registerEditorComponent({
     };
   },
   // Function to create a text block from an instance of this component
-  toBlock: ({ background, hasPattern }) => {
-    return `<divider-box ${background} ${hasPattern}></divider-box>`;
-  },
+  toBlock: ({ background, hasPattern }) =>
+    '<divider-box background=' + background + ' hasPattern=' + hasPattern + '></divider-box>',
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: ({ background, hasPattern }) => {
-    return `<p>dividerBox ${background} ${hasPattern}</p>`;
+    return `<div>dividerBox ${background} ${hasPattern}</div>`;
   }
 });

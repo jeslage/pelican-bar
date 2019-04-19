@@ -4,8 +4,10 @@ import StyledRow from './row.style';
 
 const Row = ({ headline, children }) => (
   <StyledRow>
-    <h3>{headline}</h3>
-    <div className="wrapper">{children}</div>
+    <div className="row__headline">
+      <h3>{headline}</h3>
+    </div>
+    <div className="row__wrapper">{children}</div>
   </StyledRow>
 );
 

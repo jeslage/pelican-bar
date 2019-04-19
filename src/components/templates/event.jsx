@@ -7,7 +7,7 @@ import DefaultLayout from '../layouts/default/default';
 const EventPage = ({ data }) => {
   const { content } = data;
   const { frontmatter, html } = content;
-  const { title, date, image } = frontmatter;
+  const { title, date } = frontmatter;
 
   return (
     <DefaultLayout>
@@ -15,12 +15,6 @@ const EventPage = ({ data }) => {
       <p>{date}</p>
 
       <div dangerouslySetInnerHTML={{ __html: html }} />
-
-      {image && (
-        <div style={{ maxWidth: '700px', backgroundColor: 'lightgray' }}>
-          <Img fluid={image.childImageSharp.fluid} />
-        </div>
-      )}
     </DefaultLayout>
   );
 };
@@ -32,13 +26,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
-        image {
-          childImageSharp {
-            fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
       }
     }
   }

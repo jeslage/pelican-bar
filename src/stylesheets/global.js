@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: "Knif Mono", Arial, sans-serif;
+    font-family: "Lemur Medium", Arial, sans-serif;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

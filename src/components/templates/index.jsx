@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
-import Img from 'gatsby-image';
 
 import RowMolecule from '../molecules/row/row';
 import BoxAtom from '../atoms/box/box';
 import LinkAtom from '../atoms/link/link';
 import HeroOrganism from '../organisms/hero/hero';
+import GalleryOrganism from '../organisms/gallery/gallery';
 
 import DefaultLayout from '../layouts/default/default';
 
@@ -16,27 +16,18 @@ const IndexPage = ({ data }) => {
   const { vibes, contact, bar, hero } = frontmatter;
 
   const verticalHeader = true;
-  console.log(vibes);
+
   return (
     <DefaultLayout verticalHeader={verticalHeader}>
       {!verticalHeader && <HeroOrganism {...hero} />}
-      <RowMolecule headline="Vibes">
-        <BoxAtom background="green" size="s" noTopBorder />
 
-        {vibes.gallery.map(image => (
-          <Img fluid={image.childImageSharp.fluid} />
-        ))}
-        <div className="content">
-          <ReactMarkdown source={bar.description} />
-        </div>
-        <BoxAtom background="purple" size="s" />
-      </RowMolecule>
       <RowMolecule headline="Bar">
         <BoxAtom hasPattern noTopBorder />
         <div className="content">
           <ReactMarkdown source={bar.description} />
         </div>
       </RowMolecule>
+
       <RowMolecule headline="Kontakt">
         <BoxAtom background="purple" size="l" noTopBorder />
 
@@ -66,6 +57,16 @@ const IndexPage = ({ data }) => {
         <div className="content">
           <ReactMarkdown source={contact.contact} />
         </div>
+      </RowMolecule>
+
+      <RowMolecule headline="Vibes">
+        <BoxAtom background="green" size="s" noTopBorder />
+
+        <GalleryOrganism {...vibes} />
+        <div className="content">
+          <ReactMarkdown source={bar.description} />
+        </div>
+        <BoxAtom background="purple" size="s" />
       </RowMolecule>
     </DefaultLayout>
   );

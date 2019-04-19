@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   width: 100%;
   background: #fff;
   z-index: 1;
-  border-bottom: 5px solid black;
+  border-bottom: 8px solid black;
   padding: 0px 10px;
   display: flex;
 
@@ -36,7 +36,6 @@ const StyledHeader = styled.header`
     props.isVertical &&
     css`
       padding: 0;
-      border-right: 5px solid black;
       width: 100vh;
       left: -100vh;
       transform: rotate(-90deg);
@@ -47,8 +46,7 @@ const StyledHeader = styled.header`
       }
 
       .header__signet {
-        padding: 0 7px;
-        border-left: 5px solid black;
+        padding: 0 10px;
 
         svg {
           transform: rotate(90deg);

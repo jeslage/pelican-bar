@@ -4,7 +4,6 @@ import { mq } from '../../../stylesheets/tools/index';
 const StyledRow = styled.div`
   position: relative;
   width: 100%;
-  border-top: 5px solid #000;
 
   ${mq('m')} {
     display: inline-block;
@@ -12,32 +11,37 @@ const StyledRow = styled.div`
     width: 33.33%;
 
     &:nth-of-type(2) {
-      border-right: 5px solid #000;
-      border-left: 5px solid #000;
+      border-right: 8px solid #000;
+      border-left: 8px solid #000;
     }
   }
 
-  h3 {
-    border-bottom: 5px solid black;
-    padding: 19px 20px;
-    margin: 0;
-    font-size: 20px;
+  .row__headline {
+    display: flex;
+    align-items: center;
     height: 70px;
+    border-bottom: 8px solid black;
+    padding: 0 20px;
+    margin: 0;
+
+    h3  {
+      font-size: 20px;
+    }
   }
 
   p {
     font-size: 20px;
   }
 
-  .wrapper {
+  .row__wrapper {
     ${mq('m')} {
-      height: 100vh;
+      height: calc(100vh - 70px);
       overflow-x: auto;
     }
   }
 
   .content {
-    padding: 25px;
+    padding: 30px;
   }
 `;
 

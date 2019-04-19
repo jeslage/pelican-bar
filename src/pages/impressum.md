@@ -6,7 +6,7 @@ youtube xZwfY5eYJ8M
 
 test
 
-<divider-box background=green hasPattern=true></divider-box>
+dividerBox green true
 
 rest
 

@@ -2,7 +2,18 @@ import CMS from 'netlify-cms';
 
 import IndexPreview from './preview/index';
 
-CMS.registerPreviewTemplate('index', IndexPreview);
+const CSSInjector = children => {
+  const iframe = document.querySelector('.nc-previewPane-frame');
+  const iframeHeadElem = iframe.contentDocument.head;
+
+  return <StyleSheetManager target={iframeHeadElem}>{children}</StyleSheetManager>;
+};
+
+CMS.registerPreviewTemplate('index', props => (
+  <CSSInjector>
+    <IndexPreview {...props} />
+  </CSSInjector>
+));
 
 // CMS.registerEditorComponent({
 //   // Internal id of the component

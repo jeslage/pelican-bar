@@ -4,8 +4,8 @@ headline: Impressum
 ---
 test
 
-<divider-box green true></divider-box>
+<divider-box background=green hasPattern=true></divider-box>
 
-test
+rest
 
-![test alt](/images/arj-1159760-unsplash.jpg "Title")
+![testalt](/images/arj-1159760-unsplash.jpg "title")

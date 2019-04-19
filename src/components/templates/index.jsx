@@ -1,6 +1,7 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
+import Img from 'gatsby-image';
 
 import RowMolecule from '../molecules/row/row';
 import BoxAtom from '../atoms/box/box';
@@ -12,15 +13,19 @@ import DefaultLayout from '../layouts/default/default';
 const IndexPage = ({ data }) => {
   const { site } = data;
   const { frontmatter } = site;
-  const { contact, bar, hero } = frontmatter;
+  const { vibes, contact, bar, hero } = frontmatter;
 
   const verticalHeader = true;
-
+  console.log(vibes);
   return (
     <DefaultLayout verticalHeader={verticalHeader}>
       {!verticalHeader && <HeroOrganism {...hero} />}
       <RowMolecule headline="Vibes">
         <BoxAtom background="green" size="s" noTopBorder />
+
+        {vibes.gallery.map(image => (
+          <Img fluid={image.childImageSharp.fluid} />
+        ))}
         <div className="content">
           <ReactMarkdown source={bar.description} />
         </div>
@@ -73,12 +78,21 @@ export const pageQuery = graphql`
         hero {
           image {
             childImageSharp {
-              fluid(maxWidth: 1440) {
+              fluid(maxWidth: 1000) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           headline
+        }
+        vibes {
+          gallery {
+            childImageSharp {
+              fluid(maxWidth: 1440) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+            }
+          }
         }
         contact {
           contact

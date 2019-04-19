@@ -13,7 +13,7 @@ import DefaultLayout from '../layouts/default/default';
 const IndexPage = ({ data }) => {
   const { site } = data;
   const { frontmatter } = site;
-  const { vibes, contact, bar, hero } = frontmatter;
+  const { vibes, hero } = frontmatter;
 
   const verticalHeader = true;
 
@@ -23,23 +23,17 @@ const IndexPage = ({ data }) => {
 
       <RowMolecule headline="Bar">
         <BoxAtom hasPattern noTopBorder />
-        <div className="content">
-          <ReactMarkdown source={bar.description} />
-        </div>
+        <div className="content" />
       </RowMolecule>
 
       <RowMolecule headline="Kontakt">
         <BoxAtom background="purple" size="l" noTopBorder />
 
-        <div className="content">
-          <ReactMarkdown source={contact.openingHours} />
-        </div>
+        <div className="content" />
 
         <BoxAtom hasPattern size="s" />
 
-        <div className="content">
-          <ReactMarkdown source={contact.route} />
-        </div>
+        <div className="content" />
 
         <BoxAtom background="salmon" size="l" />
 
@@ -54,19 +48,13 @@ const IndexPage = ({ data }) => {
 
         <BoxAtom hasPattern size="s" />
 
-        <div className="content">
-          <ReactMarkdown source={contact.contact} />
-        </div>
+        <div className="content" />
       </RowMolecule>
 
       <RowMolecule headline="Vibes">
         <BoxAtom background="green" size="s" noTopBorder />
 
         <GalleryOrganism {...vibes} />
-        <div className="content">
-          <ReactMarkdown source={bar.description} />
-        </div>
-        <BoxAtom background="purple" size="s" />
       </RowMolecule>
     </DefaultLayout>
   );
@@ -94,14 +82,6 @@ export const pageQuery = graphql`
               }
             }
           }
-        }
-        contact {
-          contact
-          openingHours
-          route
-        }
-        bar {
-          description
         }
       }
     }

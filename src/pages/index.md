@@ -5,9 +5,10 @@ hero:
   image: /images/cocktail.jpg
 vibes:
   gallery:
-    - /images/chemnitz.jpg
-    - /images/cocktail.jpg
-    - /images/unnamed.jpg
+    - /images/jacalyn-beales-436936-unsplash.jpg
+    - /images/lily-banse-608822-unsplash.jpg
+    - /images/arj-1159760-unsplash.jpg
+    - /images/lefteris-kallergis-1374887-unsplash.jpg
 bar:
   description: >-
     Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den

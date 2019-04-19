@@ -13,7 +13,7 @@ const Gallery = ({ gallery }) => (
   <StyledGallery>
     {gallery.map((image, index) => (
       <div key={index}>
-        <Img fluid={image.childImageSharp.fluid} />
+        {image.childImageSharp ? <Img fluid={image.childImageSharp.fluid} /> : <img src={image} />}
         <Box background={randomValue(backgrounds)} size={randomValue(sizes)} />
       </div>
     ))}

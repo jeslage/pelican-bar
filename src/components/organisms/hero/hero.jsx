@@ -5,7 +5,7 @@ import StyledHero from './hero.style';
 
 const Hero = ({ image, headline }) => (
   <StyledHero>
-    <Img fluid={image.childImageSharp.fluid} />
+    {image.childImageSharp ? <Img fluid={image.childImageSharp.fluid} /> : <img src={image} />}
 
     {headline && <h1>{headline}</h1>}
   </StyledHero>

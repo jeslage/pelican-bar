@@ -1,11 +1,11 @@
 import React from 'react';
-import IndexPage from '../../components/templates/index';
+import { IndexPageTemplate } from '../../components/templates/index';
 
 const IndexPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS();
 
   if (data) {
-    return <IndexPage {...data} />;
+    return <IndexPageTemplate {...data} />;
   } else {
     return <div>Loading...</div>;
   }

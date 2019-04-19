@@ -9,11 +9,15 @@ import GalleryOrganism from '../organisms/gallery/gallery';
 
 import DefaultLayout from '../layouts/default/default';
 
-const IndexPage = ({ data }) => {
-  const { site } = data;
-  const { frontmatter } = site;
-  const { vibes, bar, contact, route, reservation, openingHours, hero } = frontmatter;
-
+export const IndexPageTemplate = ({
+  vibes,
+  bar,
+  contact,
+  route,
+  reservation,
+  openingHours,
+  hero
+}) => {
   const verticalHeader = true;
 
   return (
@@ -71,9 +75,14 @@ const IndexPage = ({ data }) => {
   );
 };
 
+const IndexPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark;
+  return <IndexPageTemplate {...frontmatter} />;
+};
+
 export const pageQuery = graphql`
   query($path: String!) {
-    site: markdownRemark(fields: { slug: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
         hero {
           image {

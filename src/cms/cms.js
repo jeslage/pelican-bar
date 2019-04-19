@@ -1,5 +1,6 @@
 import CMS from 'netlify-cms';
 import React from 'react';
+import { StyleSheetManager } from 'styled-components';
 
 import IndexPreview from './preview/index';
 

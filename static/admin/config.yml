@@ -43,9 +43,8 @@ collections:
             name: 'route'
             widget: 'object'
             fields:
-              - { label: 'Opening Hours', name: 'openingHours', widget: 'text' }
-              - { label: 'Route', name: 'route', widget: 'text' }
-              - { label: 'Contact', name: 'contact', widget: 'text' }
+              - { label: 'Headline', name: 'headline', widget: 'string' }
+              - { label: 'Text', name: 'text', widget: 'text' }
           - label: 'Opening hours'
             name: 'openingHours'
             widget: 'object'

@@ -4,7 +4,7 @@ import { StyleSheetManager } from 'styled-components';
 
 import IndexPreview from './preview/index';
 
-const CSSInjector = children => {
+const CSSInjector = ({ children }) => {
   const iframe = document.getElementsByTagName('iframe')[0];
   const iframeHeadElem = iframe.contentDocument.head;
 

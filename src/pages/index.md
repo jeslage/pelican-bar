@@ -21,20 +21,20 @@ bar:
     dieser Stadt, und die stählerne Acht um seine Handgelenke würde gleich
     zuschnappen?
 contact:
-  contact: |-
+  headline: Contact
+  text: |-
     Kontakt
 
     test
     test
-  openingHours: |-
-    Open
-
-    Von 10:00 – 04:00 Uhr
-  route: |-
-    Route
-
-
+openingHours:
+  headline: Open
+  text: |-
+    test
+    test
+route:
+  headline: Route
+  text: |-
     test
     test
 ---
-

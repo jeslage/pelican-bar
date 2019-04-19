@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
   const { site } = data;
   const { frontmatter } = site;
   const { vibes, contact, bar, hero } = frontmatter;
-  console.log(contact);
+
   const verticalHeader = true;
 
   return (

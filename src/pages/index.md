@@ -1,8 +1,13 @@
 ---
 type: index
 hero:
-  image: /images/cocktail.jpg
   headline: The most fly bar in Hamburg
+  image: /images/cocktail.jpg
+vibes:
+  gallery:
+    - /images/chemnitz.jpg
+    - /images/cocktail.jpg
+    - /images/unnamed.jpg
 bar:
   description: >-
     Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den
@@ -36,3 +41,4 @@ contact:
     Mit dem Bus:\
     Test
 ---
+

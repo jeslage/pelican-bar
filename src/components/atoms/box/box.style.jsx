@@ -13,19 +13,25 @@ const StyledBox = styled.div`
     ${props =>
       props.size === 's' &&
       css`
-        height: 10vw;
+        height: calc(10vw - 30px);
       `}
 
     ${props =>
       props.size === 'm' &&
       css`
-        height: 15vw;
+        height: calc(15vw - 30px);
       `}
     
     ${props =>
       props.size === 'l' &&
       css`
-        height: 22vw;
+        height: calc(22vw - 30px);
+      `}
+
+    ${props =>
+      props.size === 'xl' &&
+      css`
+        height: calc(33.333vw - 30px);
       `}
   }
 
@@ -33,7 +39,7 @@ const StyledBox = styled.div`
     props.hasPattern &&
     css`
       background-image: url(${pattern});
-      background-size: 150%, auto, cover;
+      background-size: 200%, auto, cover;
       background-blend-mode: multiply;
     `}
 

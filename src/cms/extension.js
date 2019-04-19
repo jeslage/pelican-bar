@@ -26,7 +26,7 @@ CMS.registerEditorComponent({
   },
   // Function to create a text block from an instance of this component
   toBlock: ({ background, hasPattern }) => {
-    return `dividerBox ${background} ${hasPattern}`;
+    return `<Box background={${background}} hasPattern={${hasPattern}} />`;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)

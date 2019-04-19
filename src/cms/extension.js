@@ -13,52 +13,24 @@ CMS.registerEditorComponent({
       widget: 'select',
       options: ['green', 'yellow', 'blue', 'purple', 'salmon']
     },
-    { label: 'Has Pattern', name: 'hasPattern', widget: 'boolean', default: false }
+    { label: 'Pattern', name: 'pattern', widget: 'boolean', default: false }
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^<divider-box background=(\S+) hasPattern=(\S+)><\/divider-box>$/,
+  pattern: /^<divider-box background=(\S+) pattern=(\S+)><\/divider-box>$/,
   // Function to extract data elements from the regexp match
   fromBlock: match => {
     return {
       background: match[1],
-      hasPattern: match[2]
+      pattern: match[2]
     };
   },
   // Function to create a text block from an instance of this component
-  toBlock: ({ background, hasPattern }) => {
-    return `<divider-box background=${background} hasPattern=${hasPattern}></divider-box>`;
+  toBlock: ({ background, pattern }) => {
+    return `<divider-box background=${background} pattern=${pattern}></divider-box>`;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: ({ background, hasPattern }) => {
-    return `<p>${background} ${hasPattern}</p>`;
-  }
-});
-
-CMS.registerEditorComponent({
-  // Internal id of the component
-  id: 'youtube',
-  // Visible label
-  label: 'Youtube',
-  // Fields the user need to fill out when adding an instance of the component
-  fields: [{ name: 'id', label: 'Youtube Video ID', widget: 'string' }],
-  // Pattern to identify a block as being an instance of this component
-  pattern: /^youtube (\S+)$/,
-  // Function to extract data elements from the regexp match
-  fromBlock: function(match) {
-    return {
-      id: match[1]
-    };
-  },
-  // Function to create a text block from an instance of this component
-  toBlock: function(obj) {
-    return 'youtube ' + obj.id;
-  },
-  // Preview output for this component. Can either be a string or a React component
-  // (component gives better render performance)
-  toPreview: function(obj) {
-    return (
-      '<img src="http://img.youtube.com/vi/' + obj.id + '/maxresdefault.jpg" alt="Youtube Video"/>'
-    );
+  toPreview: ({ background, pattern }) => {
+    return `<p>${background} ${pattern}</p>`;
   }
 });

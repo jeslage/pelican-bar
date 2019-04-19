@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
       {!verticalHeader && <HeroOrganism {...hero} />}
 
       <RowMolecule headline="Bar">
-        <BoxAtom hasPattern noTopBorder />
+        <BoxAtom pattern noTopBorder />
         <div className="content">
           <p dangerouslySetInnerHTML={{ __html: bar.description.replace('\n', '</br>') }} />
         </div>
@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
           <p dangerouslySetInnerHTML={{ __html: contact.openingHours.replace('\n', '</br>') }} />
         </div>
 
-        <BoxAtom hasPattern size="s" />
+        <BoxAtom pattern size="s" />
 
         <div className="content">
           <p dangerouslySetInnerHTML={{ __html: contact.route.replace('\n', '</br>') }} />
@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
           </LinkAtom>
         </div>
 
-        <BoxAtom hasPattern size="s" />
+        <BoxAtom pattern size="s" />
 
         <div className="content">
           <p dangerouslySetInnerHTML={{ __html: contact.contact.replace('\n', '</br>') }} />

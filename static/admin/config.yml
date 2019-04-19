@@ -51,6 +51,18 @@ collections:
             fields:
               - { label: 'Headline', name: 'headline', widget: 'string' }
               - { label: 'Text', name: 'text', widget: 'text' }
+          - label: 'Reservation'
+            name: 'reservation'
+            widget: 'object'
+            fields:
+              - { label: 'Headline', name: 'headline', widget: 'string' }
+              - { label: 'Text', name: 'text', widget: 'text' }
+              - {
+                  label: 'URL',
+                  name: 'url',
+                  widget: 'string',
+                  hint: 'The OpenTable reservation url',
+                }
           - label: 'Contact'
             name: 'contact'
             widget: 'object'

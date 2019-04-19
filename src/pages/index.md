@@ -27,6 +27,12 @@ contact:
 
     test
     test
+reservation:
+  headline: Reservieren
+  text: |-
+    test
+    test
+  url: https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE
 openingHours:
   headline: Open
   text: |-

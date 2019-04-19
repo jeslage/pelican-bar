@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import ReactMarkdown from 'react-markdown';
 
 import RowMolecule from '../molecules/row/row';
 import BoxAtom from '../atoms/box/box';
@@ -13,7 +12,7 @@ import DefaultLayout from '../layouts/default/default';
 const IndexPage = ({ data }) => {
   const { site } = data;
   const { frontmatter } = site;
-  const { vibes, bar, hero } = frontmatter;
+  const { vibes, bar, contact, route, reservation, openingHours, hero } = frontmatter;
 
   const verticalHeader = true;
 
@@ -31,26 +30,36 @@ const IndexPage = ({ data }) => {
       <RowMolecule headline="Kontakt">
         <BoxAtom background="purple" size="l" noTopBorder />
 
-        <div className="content" />
-
-        <BoxAtom pattern size="s" />
-
-        <div className="content" />
-
-        <BoxAtom background="salmon" size="l" />
-
         <div className="content">
-          <LinkAtom
-            href="https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE"
-            target="_blank"
-          >
-            Tisch buchen!
-          </LinkAtom>
+          <p>{contact.headline}</p>
+          <p dangerouslySetInnerHTML={{ __html: contact.text.replace('\n', '</br>') }} />
         </div>
 
         <BoxAtom pattern size="s" />
 
-        <div className="content" />
+        <div className="content">
+          <p>{route.headline}</p>
+          <p dangerouslySetInnerHTML={{ __html: route.text.replace('\n', '</br>') }} />
+        </div>
+
+        <BoxAtom background="salmon" size="l" />
+
+        <div className="content">
+          <p>{reservation.headline}</p>
+          <p dangerouslySetInnerHTML={{ __html: reservation.text.replace('\n', '</br>') }} />
+          {reservation.url && (
+            <LinkAtom href={reservation.url} target="_blank">
+              Tisch buchen!
+            </LinkAtom>
+          )}
+        </div>
+
+        <BoxAtom pattern size="s" />
+
+        <div className="content">
+          <p>{openingHours.headline}</p>
+          <p dangerouslySetInnerHTML={{ __html: openingHours.text.replace('\n', '</br>') }} />
+        </div>
       </RowMolecule>
 
       <RowMolecule headline="Vibes">
@@ -85,7 +94,23 @@ export const pageQuery = graphql`
             }
           }
         }
-
+        openingHours {
+          headline
+          text
+        }
+        contact {
+          headline
+          text
+        }
+        route {
+          headline
+          text
+        }
+        reservation {
+          headline
+          text
+          url
+        }
         bar {
           description
         }

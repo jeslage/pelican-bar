@@ -1,4 +1,8 @@
-// import CMS from 'netlify-cms';
+import CMS from 'netlify-cms';
+
+import IndexPreview from './preview/index';
+
+CMS.registerPreviewTemplate('index', IndexPreview);
 
 // CMS.registerEditorComponent({
 //   // Internal id of the component

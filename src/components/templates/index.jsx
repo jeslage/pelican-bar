@@ -13,7 +13,7 @@ import DefaultLayout from '../layouts/default/default';
 const IndexPage = ({ data }) => {
   const { site } = data;
   const { frontmatter } = site;
-  const { vibes, contact, bar, hero } = frontmatter;
+  const { vibes, bar, hero } = frontmatter;
 
   const verticalHeader = true;
 
@@ -31,15 +31,11 @@ const IndexPage = ({ data }) => {
       <RowMolecule headline="Kontakt">
         <BoxAtom background="purple" size="l" noTopBorder />
 
-        <div className="content">
-          <p dangerouslySetInnerHTML={{ __html: contact.openingHours.replace('\n', '</br>') }} />
-        </div>
+        <div className="content" />
 
         <BoxAtom pattern size="s" />
 
-        <div className="content">
-          <p dangerouslySetInnerHTML={{ __html: contact.route.replace('\n', '</br>') }} />
-        </div>
+        <div className="content" />
 
         <BoxAtom background="salmon" size="l" />
 
@@ -54,9 +50,7 @@ const IndexPage = ({ data }) => {
 
         <BoxAtom pattern size="s" />
 
-        <div className="content">
-          <p dangerouslySetInnerHTML={{ __html: contact.contact.replace('\n', '</br>') }} />
-        </div>
+        <div className="content" />
       </RowMolecule>
 
       <RowMolecule headline="Vibes">
@@ -91,11 +85,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        contact {
-          contact
-          openingHours
-          route
-        }
+
         bar {
           description
         }

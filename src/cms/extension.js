@@ -30,7 +30,7 @@ CMS.registerEditorComponent({
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: () => {
-    return '<p>DividerBox</p>';
+  toPreview: ({ background, hasPattern }) => {
+    return `<div>dividerBox ${background} ${hasPattern}</div>`;
   }
 });

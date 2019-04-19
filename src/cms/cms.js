@@ -1,9 +1,10 @@
 import CMS from 'netlify-cms';
+import React from 'react';
 
 import IndexPreview from './preview/index';
 
 const CSSInjector = children => {
-  const iframe = document.querySelector('.nc-previewPane-frame');
+  const iframe = document.getElementsByTagName('iframe')[0];
   const iframeHeadElem = iframe.contentDocument.head;
 
   return <StyleSheetManager target={iframeHeadElem}>{children}</StyleSheetManager>;

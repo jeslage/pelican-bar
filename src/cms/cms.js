@@ -23,6 +23,7 @@ CMS.registerPreviewTemplate('static', props => (
     <StaticPreview {...props} />
   </CSSInjector>
 ));
+
 // CMS.registerEditorComponent({
 //   // Internal id of the component
 //   id: 'dividerBox',

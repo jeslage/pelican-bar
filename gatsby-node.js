@@ -29,6 +29,8 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       if (node.frontmatter.type !== 'seo') {
         if (node.frontmatter.type !== 'general') {
+          console.log(node.fields.slug);
+          console.log(node.frontmatter.type);
           createPage({
             path: node.fields.slug,
             component: path.resolve(

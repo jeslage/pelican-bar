@@ -13,8 +13,8 @@ import DefaultLayout from '../layouts/default/default';
 const IndexPage = ({ data }) => {
   const { site } = data;
   const { frontmatter } = site;
-  const { vibes, hero } = frontmatter;
-
+  const { vibes, contact, bar, hero } = frontmatter;
+  console.log(contact);
   const verticalHeader = true;
 
   return (
@@ -23,17 +23,23 @@ const IndexPage = ({ data }) => {
 
       <RowMolecule headline="Bar">
         <BoxAtom hasPattern noTopBorder />
-        <div className="content" />
+        <div className="content">
+          <p dangerouslySetInnerHTML={{ __html: bar.description.replace('\n', '</br>') }} />
+        </div>
       </RowMolecule>
 
       <RowMolecule headline="Kontakt">
         <BoxAtom background="purple" size="l" noTopBorder />
 
-        <div className="content" />
+        <div className="content">
+          <p dangerouslySetInnerHTML={{ __html: contact.openingHours.replace('\n', '</br>') }} />
+        </div>
 
         <BoxAtom hasPattern size="s" />
 
-        <div className="content" />
+        <div className="content">
+          <p dangerouslySetInnerHTML={{ __html: contact.route.replace('\n', '</br>') }} />
+        </div>
 
         <BoxAtom background="salmon" size="l" />
 
@@ -48,7 +54,9 @@ const IndexPage = ({ data }) => {
 
         <BoxAtom hasPattern size="s" />
 
-        <div className="content" />
+        <div className="content">
+          <p dangerouslySetInnerHTML={{ __html: contact.contact.replace('\n', '</br>') }} />
+        </div>
       </RowMolecule>
 
       <RowMolecule headline="Vibes">
@@ -82,6 +90,14 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+        contact {
+          contact
+          openingHours
+          route
+        }
+        bar {
+          description
         }
       }
     }

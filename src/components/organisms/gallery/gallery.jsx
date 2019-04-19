@@ -11,11 +11,11 @@ const sizes = ['s', 'm', 'l', 'xl'];
 
 const Gallery = ({ gallery }) => (
   <StyledGallery>
-    {gallery.map(image => (
-      <>
+    {gallery.map((image, index) => (
+      <div key={index}>
         <Img fluid={image.childImageSharp.fluid} />
         <Box background={randomValue(backgrounds)} size={randomValue(sizes)} />
-      </>
+      </div>
     ))}
   </StyledGallery>
 );

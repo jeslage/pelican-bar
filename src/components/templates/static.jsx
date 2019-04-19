@@ -3,14 +3,14 @@ import { graphql } from 'gatsby';
 
 import DefaultLayout from '../layouts/default/default';
 
-const BlogPage = ({ data }) => {
+const StaticPage = ({ data }) => {
   const { content } = data;
   const { frontmatter, html } = content;
-  const { title } = frontmatter;
+  const { headline } = frontmatter;
 
   return (
-    <DefaultLayout>
-      <h1>{title}</h1>
+    <DefaultLayout verticalHeader>
+      <h1>{headline}</h1>
 
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </DefaultLayout>
@@ -22,10 +22,10 @@ export const pageQuery = graphql`
     content: markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
-        title
+        headline
       }
     }
   }
 `;
 
-export default BlogPage;
+export default StaticPage;

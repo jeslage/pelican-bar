@@ -22,6 +22,7 @@ const StyledRow = styled.div`
     height: 70px;
     border-bottom: 8px solid black;
     padding: 0 20px;
+    background: #fff;
     margin: 0;
 
     h3  {
@@ -42,6 +43,7 @@ const StyledRow = styled.div`
 
   .content {
     padding: 30px;
+    background: #fff;
   }
 `;
 

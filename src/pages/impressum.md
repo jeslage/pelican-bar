@@ -1,0 +1,4 @@
+---
+type: static
+headline: Impressum
+---

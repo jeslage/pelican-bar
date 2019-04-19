@@ -9,29 +9,6 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'src/pages/blog'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { name: 'type', label: 'Type', widget: 'hidden', default: 'blog' }
-      - { name: 'date', label: 'Date', widget: 'date', default: '', format: 'DD.MM.YYYY' }
-      - { name: 'title', label: 'Title' }
-      - { name: 'body', label: 'Body', widget: 'markdown' }
-
-  - name: 'events'
-    label: 'Events'
-    folder: 'src/pages/events'
-    create: true
-    slug: 'events/{{slug}}'
-    fields:
-      - { name: 'type', label: 'Type', widget: 'hidden', default: 'event' }
-      - { name: 'date', label: 'Date', widget: 'date', default: '', format: 'DD.MM.YYYY' }
-      - { name: 'image', label: 'Image', widget: 'image' }
-      - { name: 'title', label: 'Title' }
-      - { name: 'body', label: 'Body', widget: 'markdown' }
-
   - name: 'pages'
     label: 'Pages'
     files:
@@ -69,6 +46,24 @@ collections:
               - { label: 'Opening Hours', name: 'openingHours', widget: 'text' }
               - { label: 'Route', name: 'route', widget: 'text' }
               - { label: 'Contact', name: 'contact', widget: 'text' }
+
+      - file: 'src/pages/impressum.md'
+        label: 'Impressum'
+        name: 'impressum'
+        delete: false
+        fields:
+          - { name: 'type', label: 'Type', widget: 'hidden', default: 'static' }
+          - { name: 'headline', label: 'Headline' }
+          - { name: 'body', label: 'Body', widget: 'markdown' }
+
+      - file: 'src/pages/datenschutz.md'
+        label: 'Datenschutz'
+        name: 'datenschutz'
+        delete: false
+        fields:
+          - { name: 'type', label: 'Type', widget: 'hidden', default: 'static' }
+          - { name: 'headline', label: 'Headline' }
+          - { name: 'body', label: 'Body', widget: 'markdown' }
 
   - name: 'settings'
     label: 'Settings'

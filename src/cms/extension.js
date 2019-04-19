@@ -20,12 +20,13 @@ CMS.registerEditorComponent({
   // Function to extract data elements from the regexp match
   fromBlock: match => {
     return {
-      id: match[1]
+      background: match[1],
+      hasPattern: match[2]
     };
   },
   // Function to create a text block from an instance of this component
-  toBlock: obj => {
-    return `dividerBox ${obj.id}`;
+  toBlock: ({ background, hasPattern }) => {
+    return `dividerBox ${background} ${hasPattern}`;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)

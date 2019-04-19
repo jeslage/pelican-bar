@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheetManager } from 'styled-components';
 
 import IndexPreview from './preview/index';
+import StaticPreview from './preview/static';
 
 const CSSInjector = ({ children }) => {
   const iframe = document.getElementsByTagName('iframe')[0];
@@ -17,6 +18,11 @@ CMS.registerPreviewTemplate('index', props => (
   </CSSInjector>
 ));
 
+CMS.registerPreviewTemplate('static', props => (
+  <CSSInjector>
+    <StaticPreview {...props} />
+  </CSSInjector>
+));
 // CMS.registerEditorComponent({
 //   // Internal id of the component
 //   id: 'dividerBox',

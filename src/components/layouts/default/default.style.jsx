@@ -8,8 +8,8 @@ const StyledDefaultLayout = styled.main`
     ${props =>
       props.verticalHeader &&
       css`
-        width: calc(100% - 59px);
-        margin-left: 59px;
+        width: calc(100% - 70px);
+        margin-left: 70px;
       `}
   }
 `;

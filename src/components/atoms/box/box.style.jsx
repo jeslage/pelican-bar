@@ -4,14 +4,12 @@ import pattern from '../../../images/pattern.png';
 
 const StyledBox = styled.div`
   width: 100%;
-  height: 33.333vw;
+  height: calc(33.333vw - 30px);
   background-color: ${getColor('white')};
   border-top: ${props => (!props.noTopBorder ? '5px solid #000' : '')};
   border-bottom: 5px solid #000;
 
   ${mq('m')} {
-    width: 33.333vw;
-
     ${props =>
       props.size === 's' &&
       css`

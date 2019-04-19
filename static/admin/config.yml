@@ -47,6 +47,16 @@ collections:
             fields:
               - { name: 'image', label: 'Image', widget: 'image' }
               - { name: 'headline', label: 'Headline', widget: 'text' }
+          - label: 'Vibes'
+            name: 'vibes'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Gallery',
+                  name: 'gallery',
+                  widget: 'list',
+                  field: { label: Image, name: image, widget: image },
+                }
           - label: 'Bar'
             name: 'bar'
             widget: 'object'

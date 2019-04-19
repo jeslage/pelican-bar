@@ -19,9 +19,10 @@ const StyledRow = styled.div`
 
   h3 {
     border-bottom: 5px solid black;
-    padding: 20px;
+    padding: 19px 20px;
     margin: 0;
     font-size: 20px;
+    height: 70px;
   }
 
   p {

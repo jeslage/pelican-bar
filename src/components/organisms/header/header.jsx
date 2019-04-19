@@ -6,9 +6,11 @@ import StyledHeader from './header.style';
 
 const Header = ({ isVertical, title }) => (
   <StyledHeader isVertical={isVertical}>
-    <Link to="/" aria-label={`${title} Startseite`}>
-      <PelicanType />
-    </Link>
+    <div className="header__logo">
+      <Link to="/" aria-label={`${title} Startseite`}>
+        <PelicanType />
+      </Link>
+    </div>
     <div className="header__signet">
       <PelicanSignet />
     </div>

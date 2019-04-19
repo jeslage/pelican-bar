@@ -21,7 +21,9 @@ const IndexPage = ({ data }) => {
       {!verticalHeader && <HeroOrganism {...hero} />}
       <RowMolecule headline="Vibes">
         <BoxAtom background="green" size="s" noTopBorder />
-        <ReactMarkdown source={bar.description} />
+        <div className="content">
+          <ReactMarkdown source={bar.description} />
+        </div>
         <BoxAtom background="purple" size="s" />
       </RowMolecule>
       <RowMolecule headline="Bar">
@@ -50,7 +52,7 @@ const IndexPage = ({ data }) => {
             href="https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE"
             target="_blank"
           >
-            Reservieren
+            Tisch buchen!
           </LinkAtom>
         </div>
 

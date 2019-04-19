@@ -1,6 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import { btnReset } from './tools/index';
-import { LemurMediumWoff, LemurMediumWoff2, PelicanSansWoff, PelicanSansWoff2 } from './fonts';
+import {
+  KnifMonoWoff,
+  KnifMonoWoff2,
+  LemurMediumWoff,
+  LemurMediumWoff2,
+  PelicanSansWoff,
+  PelicanSansWoff2
+} from './fonts';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -19,6 +26,14 @@ const GlobalStyle = createGlobalStyle`
     font-display: block;
   }
 
+  @font-face {
+    font-family: 'Knif Mono';
+    src: local("Knif Mono"), local("aa_knif-mono-webfont"), url(${KnifMonoWoff}) format("woff"), url(${KnifMonoWoff2}) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
   * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
   html {
@@ -27,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: "Lemur Medium", Arial, sans-serif;
+    font-family: "Knif Mono", Arial, sans-serif;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

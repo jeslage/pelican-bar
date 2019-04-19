@@ -8,6 +8,11 @@ import GlobalStyle from '../../../stylesheets/global';
 import StyledDefaultLayout from './default.style';
 import Header from '../../organisms/header/header';
 
+const openTable = `<script
+type="text/javascript"
+src="http://www.opentable.com/widget/reservation/loader?rid=412810&type=standard&theme=standard&iframe=false&overlay=false&domain=com&lang=de-DE"
+/>`;
+
 const DefaultLayout = ({ verticalHeader, children }) => {
   const { globals, seo } = queryGeneralData();
 
@@ -24,6 +29,8 @@ const DefaultLayout = ({ verticalHeader, children }) => {
         <GlobalStyle />
         <Header title={globals.title} isVertical={verticalHeader} />
         <section>{children}</section>
+
+        <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: openTable }} />
       </main>
     </StyledDefaultLayout>
   );

@@ -4,6 +4,6 @@ headline: Impressum
 ---
 test
 
-<divider-box background={yellow} hasPattern={true}></divider-box>
+<divider-box green true></divider-box>
 
 trst

@@ -16,7 +16,7 @@ CMS.registerEditorComponent({
     { label: 'Has Pattern', name: 'hasPattern', widget: 'boolean', default: false }
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^dividerBox (\S+)$/,
+  pattern: /^<divider-box background=(\S+) hasPattern=(\S+)><\/divider-box>$/,
   // Function to extract data elements from the regexp match
   fromBlock: match => {
     return {
@@ -26,12 +26,12 @@ CMS.registerEditorComponent({
   },
   // Function to create a text block from an instance of this component
   toBlock: ({ background, hasPattern }) => {
-    return `dividerBox ${background} ${hasPattern}`;
+    return `<divider-box background=${background} hasPattern=${hasPattern}></divider-box>`;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: ({ background, hasPattern }) => {
-    return `<divider-box background=${background} hasPattern=${hasPattern}></divider-box>`;
+    return `<p>${background} ${hasPattern}</p>`;
   }
 });
 

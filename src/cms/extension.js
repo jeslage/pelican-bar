@@ -1,0 +1,35 @@
+import CMS from 'netlify-cms';
+
+CMS.registerEditorComponent({
+  // Internal id of the component
+  id: 'dividerBox',
+  // Visible label
+  label: 'Divider Box',
+  // Fields the user need to fill out when adding an instance of the component
+  fields: [
+    {
+      label: 'Background',
+      name: 'background',
+      widget: 'select',
+      options: ['green', 'yellow', 'blue', 'purple', 'salmon']
+    },
+    { label: 'Has Pattern', name: 'hasPattern', widget: 'boolean', default: false }
+  ],
+  // Pattern to identify a block as being an instance of this component
+  pattern: /^dividerBox (\S+)$/,
+  // Function to extract data elements from the regexp match
+  fromBlock: match => {
+    return {
+      id: match[1]
+    };
+  },
+  // Function to create a text block from an instance of this component
+  toBlock: obj => {
+    return `dividerBox ${obj.id}`;
+  },
+  // Preview output for this component. Can either be a string or a React component
+  // (component gives better render performance)
+  toPreview: () => {
+    return '<p>DividerBox</p>';
+  }
+});

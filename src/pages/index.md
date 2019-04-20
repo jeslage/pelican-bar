@@ -20,27 +20,33 @@ bar:
     gehörten die Schritte hinter ihm zu einem der unzähligen Gesetzeshüter
     dieser Stadt, und die stählerne Acht um seine Handgelenke würde gleich
     zuschnappen?
-contact:
-  headline: Contact
-  text: |-
-    Kontakt
-
-    test
-    test
-reservation:
-  headline: Reservieren
-  text: |-
-    test
-    test
-  url: https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE
-openingHours:
-  headline: Open
-  text: |-
-    test
-    test
 route:
   headline: Route
   text: |-
     test
     test
+openingHours:
+  headline: Open
+  text: |-
+    Montag bis Sonntag
+    von 14:00 – 04:00 Uhr
+
+    Jeden Donnerstag
+    Cocktail Happy Hour von
+    22:00 – 00:00 Uhr
+reservation:
+  headline: Reservieren
+  text: |-
+    test
+    test
+  url: >-
+    https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE
+contact:
+  headline: Kontakt
+  text: |-
+    Kontakt
+
+    test
+    test
 ---
+

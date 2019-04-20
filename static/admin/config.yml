@@ -48,20 +48,20 @@ collections:
                   label: 'Text',
                   name: 'text',
                   widget: 'text',
-                  hint: 'For a line-break insert </br>',
+                  hint: 'For a line-break insert <br>',
                 }
           - label: 'Opening hours'
             name: 'openingHours'
             widget: 'object'
             fields:
               - { label: 'Headline', name: 'headline', widget: 'string' }
-              - { label: 'Text', name: 'text', widget: 'text', hint: 'For a line-break type </br>' }
+              - { label: 'Text', name: 'text', widget: 'text', hint: 'For a line-break type <br>' }
           - label: 'Reservation'
             name: 'reservation'
             widget: 'object'
             fields:
               - { label: 'Headline', name: 'headline', widget: 'string' }
-              - { label: 'Text', name: 'text', widget: 'text', hint: 'For a line-break type </br>' }
+              - { label: 'Text', name: 'text', widget: 'text', hint: 'For a line-break type <br>' }
               - {
                   label: 'URL',
                   name: 'url',
@@ -73,7 +73,7 @@ collections:
             widget: 'object'
             fields:
               - { label: 'Headline', name: 'headline', widget: 'string' }
-              - { label: 'Text', name: 'text', widget: 'text', hint: 'For a line-break type </br>' }
+              - { label: 'Text', name: 'text', widget: 'text', hint: 'For a line-break type <br>' }
 
       - file: 'src/pages/impressum.md'
         label: 'Impressum'

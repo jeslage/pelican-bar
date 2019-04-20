@@ -30,9 +30,9 @@ openingHours:
   text: |-
     Montag bis Sonntag
     von 14:00 – 04:00 Uhr
-    </br></br>
-    Jeden Donnerstag </br>
-    Cocktail Happy Hour von </br>
+    <br><br>
+    Jeden Donnerstag <br>
+    Cocktail Happy Hour von <br>
     22:00 – 00:00 Uhr
 reservation:
   headline: Reservieren
@@ -49,4 +49,3 @@ contact:
     test
     test
 ---
-

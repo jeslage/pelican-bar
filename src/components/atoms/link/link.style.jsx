@@ -5,6 +5,7 @@ const StyledLink = styled.a`
   background-color: ${getColor('black')};
   color: ${getColor('white')};
   padding: 20px;
+  margin-top: 20px;
   display: block;
 `;
 

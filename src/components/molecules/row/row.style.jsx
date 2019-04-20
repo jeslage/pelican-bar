@@ -47,6 +47,10 @@ const StyledRow = styled.div`
     padding: 30px;
     background: #fff;
   }
+
+  .content__headline {
+    margin-bottom: 20px;
+  }
 `;
 
 export default StyledRow;

@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
       {!verticalHeader && <HeroOrganism {...hero} />}
 
       <RowMolecule headline="Bar">
-        <BoxAtom pattern noTopBorder />
+        <BoxAtom hasPattern noTopBorder />
         <div className="content">
           <p dangerouslySetInnerHTML={{ __html: bar.description.replace('\n', '</br>') }} />
         </div>
@@ -35,21 +35,21 @@ export const IndexPageTemplate = ({
         <BoxAtom background="purple" size="l" noTopBorder />
 
         <div className="content">
-          <p>{contact.headline}</p>
+          <p className="content__headline">{contact.headline}</p>
           <p dangerouslySetInnerHTML={{ __html: contact.text.replace('\n', '</br>') }} />
         </div>
 
-        <BoxAtom pattern size="s" />
+        <BoxAtom hasPattern size="s" />
 
         <div className="content">
-          <p>{route.headline}</p>
+          <p className="content__headline">{route.headline}</p>
           <p dangerouslySetInnerHTML={{ __html: route.text.replace('\n', '</br>') }} />
         </div>
 
         <BoxAtom background="salmon" size="l" />
 
         <div className="content">
-          <p>{reservation.headline}</p>
+          <p className="content__headline">{reservation.headline}</p>
           <p dangerouslySetInnerHTML={{ __html: reservation.text.replace('\n', '</br>') }} />
           {reservation.url && (
             <LinkAtom href={reservation.url} target="_blank">
@@ -58,10 +58,10 @@ export const IndexPageTemplate = ({
           )}
         </div>
 
-        <BoxAtom pattern size="s" />
+        <BoxAtom hasPattern size="s" />
 
         <div className="content">
-          <p>{openingHours.headline}</p>
+          <p className="content__headline">{openingHours.headline}</p>
           <p dangerouslySetInnerHTML={{ __html: openingHours.text.replace('\n', '</br>') }} />
         </div>
       </RowMolecule>

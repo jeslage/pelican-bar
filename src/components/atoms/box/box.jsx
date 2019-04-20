@@ -2,8 +2,9 @@ import React from 'react';
 
 import StyledBox from './box.style';
 
-const Box = ({ background, size, pattern, noTopBorder }) => {
-  const patternBool = pattern === true || pattern === 'true' ? true : false;
+const Box = ({ background, size, hasPattern, noTopBorder }) => {
+  const patternBool = hasPattern === true || hasPattern === 'true' ? true : false;
+
   return (
     <StyledBox
       background={background}

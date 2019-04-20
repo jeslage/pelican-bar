@@ -18,7 +18,13 @@ CMS.registerPreviewTemplate('index', props => (
   </CSSInjector>
 ));
 
-CMS.registerPreviewTemplate('static', props => (
+CMS.registerPreviewTemplate('impressum', props => (
+  <CSSInjector>
+    <StaticPreview {...props} />
+  </CSSInjector>
+));
+
+CMS.registerPreviewTemplate('datenschutz', props => (
   <CSSInjector>
     <StaticPreview {...props} />
   </CSSInjector>

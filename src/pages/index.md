@@ -43,9 +43,6 @@ reservation:
     https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE
 contact:
   headline: Kontakt
-  text: |-
-    Pelican Bar
-    Paul-Roosen-Strasse 24
-    22089 Hamburg
+  text: Pelican Bar <br> Paul-Roosen-Strasse 24<br>  22089 Hamburg<br>
 ---
 

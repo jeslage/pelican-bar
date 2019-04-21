@@ -44,8 +44,8 @@ reservation:
 contact:
   headline: Kontakt
   text: |-
-    Kontakt
-
-    test
-    test
+    Pelican Bar
+    Paul-Roosen-Strasse 24
+    22089 Hamburg
 ---
+

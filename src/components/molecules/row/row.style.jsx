@@ -6,9 +6,7 @@ const StyledRow = styled.div`
   width: 100%;
 
   ${mq('m')} {
-    display: inline-block;
     height: 100vh;
-    width: 33.33%;
 
     &:nth-of-type(2) {
       border-right: 8px solid #000;
@@ -30,26 +28,11 @@ const StyledRow = styled.div`
     }
   }
 
-  p {
-    font-size: 20px;
-  }
-
   .row__wrapper {
-    border-bottom: 8px solid #000;
-
     ${mq('m')} {
       height: calc(100vh - 70px);
       overflow-x: auto;
     }
-  }
-
-  .content {
-    padding: 30px;
-    background: #fff;
-  }
-
-  .content__headline {
-    margin-bottom: 20px;
   }
 `;
 

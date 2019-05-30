@@ -1,11 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import RowMolecule from '../molecules/row/row';
-import BoxAtom from '../atoms/box/box';
-import LinkAtom from '../atoms/link/link';
-import HeroOrganism from '../organisms/hero/hero';
-import GalleryOrganism from '../organisms/gallery/gallery';
+import Row from '../molecules/row/row';
+import Box from '../atoms/box/box';
+import Link from '../atoms/link/link';
+import Content from '../molecules/content/content';
+import Hero from '../organisms/hero/hero';
+import Section from '../organisms/section/section';
+import Gallery from '../organisms/gallery/gallery';
 
 import DefaultLayout from '../layouts/default/default';
 
@@ -22,55 +24,43 @@ export const IndexPageTemplate = ({
 
   return (
     <DefaultLayout verticalHeader={verticalHeader}>
-      {!verticalHeader && <HeroOrganism {...hero} />}
+      {!verticalHeader && <Hero {...hero} />}
+      <Section>
+        <Row headline="Bar">
+          <Box hasPattern noTopBorder />
+          <Content content={bar.description} />
+        </Row>
 
-      <RowMolecule headline="Bar">
-        <BoxAtom hasPattern noTopBorder />
-        <div className="content">
-          <p dangerouslySetInnerHTML={{ __html: bar.description.replace('\n', '</br>') }} />
-        </div>
-      </RowMolecule>
+        <Row headline="Kontakt">
+          <Box background="purple" size="l" noTopBorder />
 
-      <RowMolecule headline="Kontakt">
-        <BoxAtom background="purple" size="l" noTopBorder />
+          <Content headline={contact.headline} content={contact.text} />
 
-        <div className="content">
-          <p className="content__headline">{contact.headline}</p>
-          <p dangerouslySetInnerHTML={{ __html: contact.text.replace('\n', '</br>') }} />
-        </div>
+          <Box hasPattern size="s" />
 
-        <BoxAtom hasPattern size="s" />
+          <Content headline={route.headline} content={route.text} />
 
-        <div className="content">
-          <p className="content__headline">{route.headline}</p>
-          <p dangerouslySetInnerHTML={{ __html: route.text.replace('\n', '</br>') }} />
-        </div>
+          <Box background="salmon" size="l" />
 
-        <BoxAtom background="salmon" size="l" />
+          <Content headline={reservation.headline} content={reservation.text}>
+            {reservation.url && (
+              <Link href={reservation.url} target="_blank">
+                Tisch buchen!
+              </Link>
+            )}
+          </Content>
 
-        <div className="content">
-          <p className="content__headline">{reservation.headline}</p>
-          <p dangerouslySetInnerHTML={{ __html: reservation.text.replace('\n', '</br>') }} />
-          {reservation.url && (
-            <LinkAtom href={reservation.url} target="_blank">
-              Tisch buchen!
-            </LinkAtom>
-          )}
-        </div>
+          <Box hasPattern size="s" />
 
-        <BoxAtom hasPattern size="s" />
+          <Content headline={openingHours.headline} content={openingHours.text} />
+        </Row>
 
-        <div className="content">
-          <p className="content__headline">{openingHours.headline}</p>
-          <p dangerouslySetInnerHTML={{ __html: openingHours.text.replace('\n', '</br>') }} />
-        </div>
-      </RowMolecule>
+        <Row headline="Vibes">
+          <Box background="green" size="s" noTopBorder />
 
-      <RowMolecule headline="Vibes">
-        <BoxAtom background="green" size="s" noTopBorder />
-
-        <GalleryOrganism {...vibes} />
-      </RowMolecule>
+          <Gallery {...vibes} />
+        </Row>
+      </Section>
     </DefaultLayout>
   );
 };

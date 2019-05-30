@@ -18,12 +18,6 @@ collections:
         delete: false
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
-          - label: 'Hero'
-            name: 'hero'
-            widget: 'object'
-            fields:
-              - { name: 'image', label: 'Image', widget: 'image' }
-              - { name: 'headline', label: 'Headline', widget: 'text' }
           - label: 'Vibes'
             name: 'vibes'
             widget: 'object'
@@ -50,12 +44,7 @@ collections:
                   widget: 'text',
                   hint: 'For a line-break insert <br>',
                 }
-              - {
-                  label: 'URL',
-                  name: 'url',
-                  widget: 'string',
-                  hint: 'Google Maps url',
-                }
+              - { label: 'URL', name: 'url', widget: 'string', hint: 'Google Maps url' }
           - label: 'Opening hours'
             name: 'openingHours'
             widget: 'object'

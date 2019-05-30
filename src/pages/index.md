@@ -1,8 +1,5 @@
 ---
 type: index
-hero:
-  headline: The most fly bar in Hamburg
-  image: /images/cocktail.jpg
 vibes:
   gallery:
     - /images/arj-1159760-unsplash.jpg

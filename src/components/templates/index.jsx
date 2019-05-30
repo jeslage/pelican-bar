@@ -5,7 +5,6 @@ import Row from '../molecules/row/row';
 import Box from '../atoms/box/box';
 import Link from '../atoms/link/link';
 import Content from '../molecules/content/content';
-import Hero from '../organisms/hero/hero';
 import Section from '../organisms/section/section';
 import Gallery from '../organisms/gallery/gallery';
 

@@ -31,10 +31,12 @@ bar:
     Musikalisch wird es dann am Wochenende so richtig heiß, denn dann bringen
     unsere ausgewählten DJs die Plattenteller zum brennen.
 
-    Sonny und Tubbs wurden hier schon auf ein Feierabendbierchen gesehen! 
+    Sonny und Tubbs wurden hier schon auf ein Feierabendbierchen gesehen!
 route:
   headline: Adresse
   text: Pelican Bar <br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>
+  url: >-
+    https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE
 openingHours:
   headline: Öffnungszeiten
   text: |-
@@ -49,11 +51,5 @@ reservation:
     href="mailto:benni@pelicanbar.de">benni@pelicanbar.de</a>
 
     oder schreibt eine Nachricht über Instagram <a
-    href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>. 
-  url: >-
-    https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE
-contact:
-  headline: Kontakt
-  text: Pelican Bar <br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>
+    href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
 ---
-

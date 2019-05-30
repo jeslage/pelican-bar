@@ -11,20 +11,11 @@ import Gallery from '../organisms/gallery/gallery';
 
 import DefaultLayout from '../layouts/default/default';
 
-export const IndexPageTemplate = ({
-  vibes,
-  bar,
-  contact,
-  route,
-  reservation,
-  openingHours,
-  hero
-}) => {
+export const IndexPageTemplate = ({ vibes, bar, route, reservation, openingHours }) => {
   const verticalHeader = true;
 
   return (
     <DefaultLayout verticalHeader={verticalHeader}>
-      {!verticalHeader && <Hero {...hero} />}
       <Section>
         <Row headline="Bar">
           <Box hasPattern noTopBorder />
@@ -34,21 +25,17 @@ export const IndexPageTemplate = ({
         <Row headline="Kontakt">
           <Box background="purple" size="l" noTopBorder />
 
-          <Content headline={contact.headline} content={contact.text} />
-
-          <Box hasPattern size="s" />
-
-          <Content headline={route.headline} content={route.text} />
-
-          <Box background="salmon" size="l" />
-
-          <Content headline={reservation.headline} content={reservation.text}>
-            {reservation.url && (
-              <Link href={reservation.url} target="_blank">
-                Tisch buchen!
+          <Content headline={route.headline} content={route.text}>
+            {route.url && (
+              <Link href={route.url} target="_blank">
+                Zur Route
               </Link>
             )}
           </Content>
+
+          <Box background="salmon" size="l" />
+
+          <Content headline={reservation.headline} content={reservation.text} />
 
           <Box hasPattern size="s" />
 
@@ -74,16 +61,6 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
-        hero {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1000) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
-              }
-            }
-          }
-          headline
-        }
         vibes {
           gallery {
             childImageSharp {
@@ -97,18 +74,14 @@ export const pageQuery = graphql`
           headline
           text
         }
-        contact {
-          headline
-          text
-        }
         route {
           headline
           text
+          url
         }
         reservation {
           headline
           text
-          url
         }
         bar {
           description

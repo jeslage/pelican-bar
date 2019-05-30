@@ -48,7 +48,8 @@ reservation:
     Schreibt eine kurze Mail mit allen Eckdaten an: <a
     href="mailto:benni@pelicanbar.de">benni@pelicanbar.de</a>
 
-    oder schreibt eine Nachricht über INSTAGRAM bar_pelican. 
+    oder schreibt eine Nachricht über Instagram <a
+    href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>. 
   url: >-
     https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE
 contact:

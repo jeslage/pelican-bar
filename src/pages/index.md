@@ -37,7 +37,9 @@ route:
   text: Pelican Bar <br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>
 openingHours:
   headline: Öffnungszeiten
-  text: Dienstag - Samstag von 18 Uhr bis open End
+  text: |-
+    Dienstag – Samstag
+    18 Uhr – Open End
 reservation:
   headline: Reservierung
   text: >-

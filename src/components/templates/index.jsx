@@ -10,46 +10,42 @@ import Gallery from '../organisms/gallery/gallery';
 
 import DefaultLayout from '../layouts/default/default';
 
-export const IndexPageTemplate = ({ vibes, bar, route, reservation, openingHours }) => {
-  const verticalHeader = true;
+export const IndexPageTemplate = ({ vibes, bar, route, reservation, openingHours }) => (
+  <DefaultLayout>
+    <Section>
+      <Row headline="Bar">
+        <Box hasPattern noTopBorder />
+        <Content content={bar.description} />
+      </Row>
 
-  return (
-    <DefaultLayout verticalHeader={verticalHeader}>
-      <Section>
-        <Row headline="Bar">
-          <Box hasPattern noTopBorder />
-          <Content content={bar.description} />
-        </Row>
+      <Row headline="Kontakt">
+        <Box background="purple" size="l" noTopBorder />
 
-        <Row headline="Kontakt">
-          <Box background="purple" size="l" noTopBorder />
+        <Content headline={route.headline} content={route.text}>
+          {route.url && (
+            <Link href={route.url} target="_blank">
+              Zur Route
+            </Link>
+          )}
+        </Content>
 
-          <Content headline={route.headline} content={route.text}>
-            {route.url && (
-              <Link href={route.url} target="_blank">
-                Zur Route
-              </Link>
-            )}
-          </Content>
+        <Box background="salmon" size="l" />
 
-          <Box background="salmon" size="l" />
+        <Content headline={reservation.headline} content={reservation.text} />
 
-          <Content headline={reservation.headline} content={reservation.text} />
+        <Box hasPattern size="s" />
 
-          <Box hasPattern size="s" />
+        <Content headline={openingHours.headline} content={openingHours.text} />
+      </Row>
 
-          <Content headline={openingHours.headline} content={openingHours.text} />
-        </Row>
+      <Row headline="Vibes">
+        <Box background="green" size="s" noTopBorder />
 
-        <Row headline="Vibes">
-          <Box background="green" size="s" noTopBorder />
-
-          <Gallery {...vibes} />
-        </Row>
-      </Section>
-    </DefaultLayout>
-  );
-};
+        <Gallery {...vibes} />
+      </Row>
+    </Section>
+  </DefaultLayout>
+);
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;

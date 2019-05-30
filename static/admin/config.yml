@@ -106,8 +106,6 @@ collections:
                   hint: 'Title of the website',
                   required: true,
                 }
-              - { label: 'Instagram', name: 'instagram', widget: 'string' }
-              - { label: 'Facebook', name: 'facebook', widget: 'string' }
 
           - label: 'SEO'
             name: 'seo'

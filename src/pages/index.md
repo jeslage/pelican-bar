@@ -33,7 +33,7 @@ route:
   headline: Adresse
   text: Pelican Bar <br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>
   url: >-
-    https://www.opentable.de/r/werft-craft-cuisine-and-cocktails-im-innside-by-melia-hamburg-reservations-hamburg?restref=138102&lang=de-DE
+    https://www.google.de/maps/dir//Pelican,+Am+Brunnenhof+2-4,+22767+Hamburg/@53.5533788,9.9558922,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b18fa18478ab43:0x52388599b960131b!2m2!1d9.9580809!2d53.5533788!3e0
 openingHours:
   headline: Öffnungszeiten
   text: |-
@@ -50,3 +50,4 @@ reservation:
     oder schreibt eine Nachricht über Instagram <a
     href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
 ---
+

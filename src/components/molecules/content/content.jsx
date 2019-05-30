@@ -10,6 +10,10 @@ const StyledContent = styled.div`
     font-size: 20px;
   }
 
+  a {
+    border-bottom: 1px solid black;
+  }
+
   .content__headline  {
     margin-bottom: 20px;
   }

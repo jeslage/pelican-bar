@@ -4,6 +4,7 @@ import { getColor } from '../../../stylesheets/tools/index';
 const StyledLink = styled.a`
   background-color: ${getColor('black')};
   color: ${getColor('white')};
+  border: none;
   padding: 20px;
   margin-top: 20px;
   display: block;

@@ -17,17 +17,21 @@ const StyledContent = styled.div`
   }
 `;
 
-const Content = ({ children, content, headline }) => (
-  <StyledContent>
-    {headline && <p className="content__headline">{headline}</p>}
-    {content.split('##BOX##').map(text => (
-      <>
-        <p dangerouslySetInnerHTML={{ __html: text.replace('\n', '</br>') }} />
-        <Box size="s" />
-      </>
-    ))}
-    {children}
-  </StyledContent>
-);
+const Content = ({ children, content, headline }) => {
+  const splittedContent = content.split('<Box>');
+
+  return (
+    <StyledContent>
+      {headline && <p className="content__headline">{headline}</p>}
+      {splittedContent.map((text, index) => (
+        <>
+          {index > 0 && index !== splittedContent.length && <Box size="s" />}
+          <p dangerouslySetInnerHTML={{ __html: text.replace('\n', '</br>') }} />
+        </>
+      ))}
+      {children}
+    </StyledContent>
+  );
+};
 
 export default Content;

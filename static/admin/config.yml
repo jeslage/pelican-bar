@@ -18,26 +18,18 @@ collections:
         delete: false
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
-          - label: 'Vibes'
-            name: 'vibes'
-            widget: 'object'
-            fields:
-              - {
-                  label: 'Gallery',
-                  name: 'gallery',
-                  widget: 'list',
-                  field: { label: Image, name: image, widget: image },
-                }
           - label: 'Bar'
             name: 'bar'
             widget: 'object'
             fields:
+              - { label: 'Herotext', name: 'heroText', widget: 'string' }
               - { label: 'Headline', name: 'headline', widget: 'string' }
               - { label: 'Description', name: 'description', widget: 'text' }
-          - label: 'Route'
-            name: 'route'
+          - label: 'Contact'
+            name: 'contact'
             widget: 'object'
             fields:
+              - { label: 'Herotext', name: 'heroText', widget: 'string' }
               - { label: 'Headline', name: 'headline', widget: 'string' }
               - {
                   label: 'Text',
@@ -45,7 +37,6 @@ collections:
                   widget: 'text',
                   hint: 'For a line-break insert <br>',
                 }
-              - { label: 'URL', name: 'url', widget: 'string', hint: 'Google Maps url' }
           - label: 'Opening hours'
             name: 'openingHours'
             widget: 'object'
@@ -68,7 +59,29 @@ collections:
                   widget: 'text',
                   hint: 'For a line-break insert <br>',
                 }
-
+          - label: 'Route'
+            name: 'route'
+            widget: 'object'
+            fields:
+              - { label: 'Headline', name: 'headline', widget: 'string' }
+              - {
+                  label: 'Text',
+                  name: 'text',
+                  widget: 'text',
+                  hint: 'For a line-break insert <br>',
+                }
+              - { label: 'URL', name: 'url', widget: 'string', hint: 'Google Maps url' }
+          - label: 'Vibes'
+            name: 'vibes'
+            widget: 'object'
+            fields:
+              - { label: 'Herotext', name: 'heroText', widget: 'string' }
+              - {
+                  label: 'Gallery',
+                  name: 'gallery',
+                  widget: 'list',
+                  field: { label: Image, name: image, widget: image },
+                }
       - file: 'src/pages/impressum.md'
         label: 'Impressum'
         name: 'impressum'

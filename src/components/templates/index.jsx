@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({ vibes, bar, route, reservation, openingHours
   <DefaultLayout>
     <Section>
       <Row headline="Bar">
-        <Box hasPattern noTopBorder />
+        <Box hasPattern noTopBorder background="white" size="m" />
         <Content headline={bar.headline} content={bar.description} />
       </Row>
 

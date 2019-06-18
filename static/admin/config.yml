@@ -32,6 +32,7 @@ collections:
             name: 'bar'
             widget: 'object'
             fields:
+              - { label: 'Headline', name: 'headline', widget: 'string' }
               - { label: 'Description', name: 'description', widget: 'text' }
           - label: 'Route'
             name: 'route'

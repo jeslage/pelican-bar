@@ -5,7 +5,7 @@ import DefaultLayout from '../layouts/default/default';
 
 export const StaticPageTemplate = ({ html, headline }) => {
   return (
-    <DefaultLayout verticalHeader>
+    <DefaultLayout>
       <h1>{headline}</h1>
 
       <div dangerouslySetInnerHTML={{ __html: html }} />

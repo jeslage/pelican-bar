@@ -4,16 +4,22 @@ import StyledBox from './box.style';
 
 const randomValue = array => array[Math.floor(Math.random() * array.length)];
 
-const backgrounds = ['green', 'purple', 'salmon', 'yellow', 'blue'];
+const backgrounds = ['green', 'purple', 'salmon', 'yellow', 'blue', 'white'];
 const sizes = ['s', 'm', 'l', 'xl'];
 
-const Box = ({ background, size, hasPattern, noTopBorder }) => (
-  <StyledBox
-    background={background || randomValue(backgrounds)}
-    hasPattern={hasPattern}
-    size={size || randomValue(sizes)}
-    noTopBorder={noTopBorder}
-  />
-);
+const Box = ({ background, size, hasPattern, noTopBorder }) => {
+  const randomBackground = randomValue(backgrounds);
+  const randomSize = randomValue(sizes);
+  const pattern = randomBackground === 'white';
+
+  return (
+    <StyledBox
+      background={background || randomBackground}
+      hasPattern={hasPattern || pattern}
+      size={size || randomSize}
+      noTopBorder={noTopBorder}
+    />
+  );
+};
 
 export default Box;

@@ -7,6 +7,7 @@ const StyledBox = styled.div`
   height: calc(22vw - 30px);
   border-top: ${props => (!props.noTopBorder ? '8px solid #000' : '')};
   border-bottom: 8px solid #000;
+  
   ${props =>
     props.hasPattern &&
     css`

@@ -30,10 +30,13 @@ const StyledHeader = styled.header`
     align-items: center;
     text-align: right;
     padding: 0 10px;
+
+    svg {
+      transform: rotate(90deg);
+    }
   }
 
   svg {
-    transform: rotate(90deg);
     transform-origin: center;
     height: 50px;
   }

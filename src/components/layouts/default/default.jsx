@@ -12,7 +12,7 @@ const DefaultLayout = ({ children }) => {
   const { globals, seo } = queryGeneralData();
 
   return (
-    <StyledDefaultLayout verticalHeader={verticalHeader}>
+    <StyledDefaultLayout>
       <main>
         <Helmet>
           <html lang="de" />

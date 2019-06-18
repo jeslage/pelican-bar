@@ -6,8 +6,6 @@ const queryGeneralData = () => {
       general: markdownRemark(frontmatter: { type: { eq: "general" } }) {
         frontmatter {
           globals {
-            facebook
-            instagram
             title
           }
           seo {

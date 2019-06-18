@@ -64,8 +64,8 @@ export function btnReset() {
 
 /**
  * Transform px value to rem value.
- * @param {string} px - PX value as a string. e.g. '12px'
+ * @param {string} px - PX value as a number
  * @returns {string}
- * @example ${px2rem('25px')}
+ * @example ${px2rem(25)}
  */
-export const px2rem = px => `${parseInt(px.replace('px', ''), 10) / 16}rem`;
+export const px2rem = px => `${px / 16}rem`;

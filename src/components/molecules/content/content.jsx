@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { TypoCopy } from '../../../stylesheets/tools/typo';
+
 import Box from '../../atoms/box/box';
 
 const StyledContent = styled.div`
   background: #fff;
+  ${TypoCopy}
 
   p {
     padding: 30px;
-    font-size: 20px;
   }
 
   .content__headline {

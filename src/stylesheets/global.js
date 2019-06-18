@@ -1,13 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { btnReset } from './tools/index';
-import {
-  KnifMonoWoff,
-  KnifMonoWoff2,
-  LemurMediumWoff,
-  LemurMediumWoff2,
-  PelicanSansWoff,
-  PelicanSansWoff2
-} from './fonts';
+import { LemurMediumWoff, LemurMediumWoff2, PelicanSansWoff, PelicanSansWoff2 } from './fonts';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -21,14 +14,6 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Pelican Sans';
     src: local("Pelican Sans"), local("pelican-sans-beta-italic-webfont"), url(${PelicanSansWoff}) format("woff"), url(${PelicanSansWoff2}) format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-
-  @font-face {
-    font-family: 'Knif Mono';
-    src: local("Knif Mono"), local("aa_knif-mono-webfont"), url(${KnifMonoWoff}) format("woff"), url(${KnifMonoWoff2}) format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: block;

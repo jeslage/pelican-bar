@@ -21,17 +21,16 @@ const StyledRow = styled.div`
     align-items: center;
     height: 70px;
     border-bottom: 8px solid black;
-    padding: 0 20px;
+    padding: 0 20px 3px;
     background: #fff;
     margin: 0;
 
     h3  {
-      font-size: 20px;
+      font-size: 35px;
+      margin: 0;
+      line-height: 1;
+      font-weight: normal;
     }
-  }
-
-  p {
-    font-size: 20px;
   }
 
   .row__wrapper {

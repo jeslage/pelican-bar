@@ -40,35 +40,4 @@ const fontFamilies = {
   default: 'Helvetica, sans-serif'
 };
 
-const textTypes = {
-  main: {
-    fontWeight: 400,
-    lineHeight: '40px',
-    fontSize: '40px',
-    m: {
-      lineHeight: '54px',
-      fontSize: '50px'
-    }
-  },
-  subline: {
-    fontWeight: 400,
-    lineHeight: '32px',
-    fontSize: '30px',
-    m: {
-      lineHeight: '40px',
-      fontSize: '36px'
-    }
-  },
-  copy: {
-    fontWeight: 300,
-    lineHeight: '30px',
-    fontSize: '16px'
-  },
-  copySmall: {
-    fontWeight: 300,
-    lineHeight: '20px',
-    fontSize: '14px'
-  }
-};
-
-export { breakpoints, colors, fontFamilies, grid, maxWidth, spacings, textTypes };
+export { breakpoints, colors, fontFamilies, grid, maxWidth, spacings };

@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 import Row from '../molecules/row/row';
 import Box from '../atoms/box/box';
+import Headline from '../atoms/headline/headline';
 import Link from '../atoms/link/link';
 import Content from '../molecules/content/content';
 import Section from '../organisms/section/section';
@@ -10,16 +11,33 @@ import Gallery from '../organisms/gallery/gallery';
 
 import DefaultLayout from '../layouts/default/default';
 
-export const IndexPageTemplate = ({ vibes, bar, route, reservation, openingHours }) => (
+export const IndexPageTemplate = ({ vibes, bar, contact, route, reservation, openingHours }) => (
   <DefaultLayout>
     <Section>
       <Row headline="Bar">
         <Box hasPattern noTopBorder background="white" size="m" />
+
+        <Headline>{bar.heroText}</Headline>
+
+        <Box background="purple" size="m" />
+
         <Content headline={bar.headline} content={bar.description} />
       </Row>
 
       <Row headline="Kontakt">
-        <Box background="purple" size="l" noTopBorder />
+        <Box background="green" size="l" noTopBorder />
+
+        <Content headline={openingHours.headline} content={openingHours.text} />
+
+        <Box hasPattern background="white" size="l" />
+
+        <Content headline={reservation.headline} content={reservation.text} />
+
+        <Box background="salmon" size="l" />
+
+        <Headline>{contact.heroText}</Headline>
+
+        <Box background="white" size="m" hasPattern />
 
         <Content headline={route.headline} content={route.text}>
           {route.url && (
@@ -29,17 +47,15 @@ export const IndexPageTemplate = ({ vibes, bar, route, reservation, openingHours
           )}
         </Content>
 
-        <Box background="salmon" size="l" />
+        <Box background="yellow" size="l" />
 
-        <Content headline={reservation.headline} content={reservation.text} />
+        <Content headline={contact.headline} content={contact.text} />
 
-        <Box hasPattern size="s" />
-
-        <Content headline={openingHours.headline} content={openingHours.text} />
+        <Box hasPattern background="white" size="xl" />
       </Row>
 
       <Row headline="Vibes">
-        <Box background="green" size="s" noTopBorder />
+        <Box background="white" size="s" noTopBorder />
 
         <Gallery {...vibes} />
       </Row>
@@ -57,6 +73,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
         vibes {
+          heroText
           gallery {
             childImageSharp {
               fluid(maxWidth: 1440) {
@@ -64,6 +81,11 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+        contact {
+          heroText
+          headline
+          text
         }
         openingHours {
           headline
@@ -79,6 +101,8 @@ export const pageQuery = graphql`
           text
         }
         bar {
+          heroText
+          headline
           description
         }
       }

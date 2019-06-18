@@ -6,11 +6,11 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "yarn clean && gatsby develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
+    "restart": "yarn clean && gatsby develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "gatsby-transformer-remark": "^2.3.1",
     "gatsby-transformer-sharp": "^2.1.17",
     "netlify-cms": "^2.6.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",

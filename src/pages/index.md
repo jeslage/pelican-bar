@@ -32,12 +32,12 @@ contact:
   headline: Kontakt
   heroText: We’re a fiend for Mojito’s
   text: |-
-    Pelican Bar 
-    Am Brunnenhof 2-4
-    22767 Hamburg
-
-    M: benni@pelicanbar.de
-    IG: @bar_pelican
+    Pelican Bar
+    Am Brunnenhof 2-4<br>
+    22767 Hamburg<br>
+    <br>
+    M: <a href="mailto:benni@pelicanbar.de">benni@pelicanbar.de</a><br>
+    IG: <a href="https://www.instagram.com/bar_pelican/">@bar_pelican</a><br>
 openingHours:
   headline: Öffnungszeiten
   text: |-
@@ -46,7 +46,7 @@ openingHours:
 reservation:
   headline: Reservierung
   text: >-
-    Klar könnt ihr reservieren! <br>
+    Klar könnt ihr reservieren!
 
     Schreibt eine kurze Mail mit allen Eckdaten an: <a
     href="mailto:benni@pelicanbar.de">benni@pelicanbar.de</a>
@@ -54,8 +54,8 @@ reservation:
     oder schreibt eine Nachricht über Instagram <a
     href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
 route:
-  headline: Adresse
-  text: Pelican Bar <br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>
+  headline: Anfahrt
+  text: Pelican Bar<br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>
   url: >-
     https://www.google.de/maps/dir//Pelican,+Am+Brunnenhof+2-4,+22767+Hamburg/@53.5533788,9.9558922,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b18fa18478ab43:0x52388599b960131b!2m2!1d9.9580809!2d53.5533788!3e0
 vibes:

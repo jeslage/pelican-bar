@@ -1,11 +1,5 @@
 ---
 type: index
-vibes:
-  gallery:
-    - /images/arj-1159760-unsplash.jpg
-    - /images/lily-banse-608822-unsplash.jpg
-    - /images/jacalyn-beales-436936-unsplash.jpg
-    - /images/lefteris-kallergis-1374887-unsplash.jpg
 bar:
   description: >-
     Hier verwöhnen wir euch mit fruchtigen Drinks, verdammt guten Highballs und
@@ -33,11 +27,17 @@ bar:
 
     Sonny und Tubbs wurden hier schon auf ein Feierabendbierchen gesehen!
   headline: Willkommen in der Pelican Bar St Pauli!
-route:
-  headline: Adresse
-  text: Pelican Bar <br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>
-  url: >-
-    https://www.google.de/maps/dir//Pelican,+Am+Brunnenhof+2-4,+22767+Hamburg/@53.5533788,9.9558922,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b18fa18478ab43:0x52388599b960131b!2m2!1d9.9580809!2d53.5533788!3e0
+  heroText: Most fly  bar in  Hamburg
+contact:
+  headline: Kontakt
+  heroText: We’re a fiend for Mojito’s
+  text: |-
+    Pelican Bar 
+    Am Brunnenhof 2-4
+    22767 Hamburg
+
+    M: benni@pelicanbar.de
+    IG: @bar_pelican
 openingHours:
   headline: Öffnungszeiten
   text: |-
@@ -53,5 +53,17 @@ reservation:
 
     oder schreibt eine Nachricht über Instagram <a
     href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
+route:
+  headline: Adresse
+  text: Pelican Bar <br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>
+  url: >-
+    https://www.google.de/maps/dir//Pelican,+Am+Brunnenhof+2-4,+22767+Hamburg/@53.5533788,9.9558922,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b18fa18478ab43:0x52388599b960131b!2m2!1d9.9580809!2d53.5533788!3e0
+vibes:
+  gallery:
+    - /images/arj-1159760-unsplash.jpg
+    - /images/lily-banse-608822-unsplash.jpg
+    - /images/jacalyn-beales-436936-unsplash.jpg
+    - /images/lefteris-kallergis-1374887-unsplash.jpg
+  heroText: Sonny Crockett’s favourite place
 ---
 

@@ -44,11 +44,15 @@ const StyledRow = styled.div`
   }
 
   .content {
-    padding: 30px;
     background: #fff;
+
+    p {
+      padding: 30px;
+    }
   }
 
   .content__headline {
+    padding: 30px 30px 10px;
     margin-bottom: 20px;
   }
 `;

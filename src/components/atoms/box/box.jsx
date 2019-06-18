@@ -2,17 +2,18 @@ import React from 'react';
 
 import StyledBox from './box.style';
 
-const Box = ({ background, size, hasPattern, noTopBorder }) => {
-  const patternBool = hasPattern === true || hasPattern === 'true' ? true : false;
+const randomValue = array => array[Math.floor(Math.random() * array.length)];
 
-  return (
-    <StyledBox
-      background={background}
-      hasPattern={patternBool}
-      size={size}
-      noTopBorder={noTopBorder}
-    />
-  );
-};
+const backgrounds = ['green', 'purple', 'salmon', 'yellow', 'blue'];
+const sizes = ['s', 'm', 'l', 'xl'];
+
+const Box = ({ background, size, hasPattern, noTopBorder }) => (
+  <StyledBox
+    background={background || randomValue(backgrounds)}
+    hasPattern={hasPattern}
+    size={size || randomValue(sizes)}
+    noTopBorder={noTopBorder}
+  />
+);
 
 export default Box;

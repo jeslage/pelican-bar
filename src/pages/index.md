@@ -8,9 +8,8 @@ vibes:
     - /images/lefteris-kallergis-1374887-unsplash.jpg
 bar:
   description: >-
-    Willkommen in der Pelican Bar St Pauli hier verwöhnen wir euch mit
-    fruchtigen Drinks, verdammt guten Highballs und frisch gezapftem Craft
-    Beer. 
+    Hier verwöhnen wir euch mit fruchtigen Drinks, verdammt guten Highballs und
+    frisch gezapftem Craft Beer. 
 
     Lasst euch ins Miami der 80er Jahre versetzen und verbringt einen smoothen
     Abend mit groovigen Beats direkt an unserem Herzstück, dem großen
@@ -25,10 +24,15 @@ bar:
     3 IPA oder auch die eine oder andere Spezialität von Ratsherrn sowie viele
     andere Gerstensäfte lassen das Herz von jedem Bierfreund frohlocken.
 
+
+    <Box>
+
+
     Musikalisch wird es dann am Wochenende so richtig heiß, denn dann bringen
     unsere ausgewählten DJs die Plattenteller zum brennen.
 
     Sonny und Tubbs wurden hier schon auf ein Feierabendbierchen gesehen!
+  headline: Willkommen in der Pelican Bar St Pauli!
 route:
   headline: Adresse
   text: Pelican Bar <br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>

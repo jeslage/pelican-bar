@@ -42,19 +42,6 @@ const StyledRow = styled.div`
       overflow-x: auto;
     }
   }
-
-  .content {
-    background: #fff;
-
-    p {
-      padding: 30px;
-    }
-  }
-
-  .content__headline {
-    padding: 30px 30px 10px;
-    margin-bottom: 20px;
-  }
 `;
 
 export default StyledRow;

@@ -8,7 +8,7 @@ import GlobalStyle from '../../../stylesheets/global';
 import StyledDefaultLayout from './default.style';
 import Header from '../../organisms/header/header';
 
-const DefaultLayout = ({ verticalHeader, children }) => {
+const DefaultLayout = ({ children }) => {
   const { globals, seo } = queryGeneralData();
 
   return (
@@ -22,7 +22,7 @@ const DefaultLayout = ({ verticalHeader, children }) => {
           {seo.keywords && <meta name="keywords" content={seo.keywords} />}
         </Helmet>
         <GlobalStyle />
-        <Header title={globals.title} isVertical={verticalHeader} />
+        <Header title={globals.title} />
         <section>{children}</section>
       </main>
     </StyledDefaultLayout>

@@ -4,73 +4,38 @@ import { graphql } from 'gatsby';
 import Row from '../molecules/row/row';
 import Box from '../atoms/box/box';
 import Link from '../atoms/link/link';
-import Hero from '../organisms/hero/hero';
+import Content from '../molecules/content/content';
+import Section from '../organisms/section/section';
 import Gallery from '../organisms/gallery/gallery';
 
 import DefaultLayout from '../layouts/default/default';
 
-export const IndexPageTemplate = ({
-  vibes,
-  bar,
-  contact,
-  route,
-  reservation,
-  openingHours,
-  hero
-}) => {
-  const verticalHeader = true;
-
-  return (
-    <DefaultLayout verticalHeader={verticalHeader}>
-      {!verticalHeader && <Hero {...hero} />}
-
+export const IndexPageTemplate = ({ vibes, bar, route, reservation, openingHours }) => (
+  <DefaultLayout>
+    <Section>
       <Row headline="Bar">
         <Box hasPattern noTopBorder />
-        <div className="content">
-          <p className="content__headline">{bar.headline}</p>
-
-          {bar.description.split('## SPACER ##').map(text => (
-            <>
-              <p dangerouslySetInnerHTML={{ __html: text.replace('\n', '</br>') }} />
-              <Box size="s" />
-            </>
-          ))}
-        </div>
+        <Content headline={bar.headline} content={bar.description} />
       </Row>
 
       <Row headline="Kontakt">
         <Box background="purple" size="l" noTopBorder />
 
-        <div className="content">
-          <p className="content__headline">{contact.headline}</p>
-          <p dangerouslySetInnerHTML={{ __html: contact.text.replace('\n', '</br>') }} />
-        </div>
-
-        <Box hasPattern size="s" />
-
-        <div className="content">
-          <p className="content__headline">{route.headline}</p>
-          <p dangerouslySetInnerHTML={{ __html: route.text.replace('\n', '</br>') }} />
-        </div>
+        <Content headline={route.headline} content={route.text}>
+          {route.url && (
+            <Link href={route.url} target="_blank">
+              Zur Route
+            </Link>
+          )}
+        </Content>
 
         <Box background="salmon" size="l" />
 
-        <div className="content">
-          <p className="content__headline">{reservation.headline}</p>
-          <p dangerouslySetInnerHTML={{ __html: reservation.text.replace('\n', '</br>') }} />
-          {reservation.url && (
-            <Link href={reservation.url} target="_blank">
-              Tisch buchen!
-            </Link>
-          )}
-        </div>
+        <Content headline={reservation.headline} content={reservation.text} />
 
         <Box hasPattern size="s" />
 
-        <div className="content">
-          <p className="content__headline">{openingHours.headline}</p>
-          <p dangerouslySetInnerHTML={{ __html: openingHours.text.replace('\n', '</br>') }} />
-        </div>
+        <Content headline={openingHours.headline} content={openingHours.text} />
       </Row>
 
       <Row headline="Vibes">
@@ -78,9 +43,9 @@ export const IndexPageTemplate = ({
 
         <Gallery {...vibes} />
       </Row>
-    </DefaultLayout>
-  );
-};
+    </Section>
+  </DefaultLayout>
+);
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -91,16 +56,6 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
-        hero {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1000) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
-              }
-            }
-          }
-          headline
-        }
         vibes {
           gallery {
             childImageSharp {
@@ -114,18 +69,14 @@ export const pageQuery = graphql`
           headline
           text
         }
-        contact {
-          headline
-          text
-        }
         route {
           headline
           text
+          url
         }
         reservation {
           headline
           text
-          url
         }
         bar {
           description

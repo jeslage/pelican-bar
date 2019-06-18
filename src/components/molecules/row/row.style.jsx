@@ -34,8 +34,6 @@ const StyledRow = styled.div`
   }
 
   .row__wrapper {
-    border-bottom: 8px solid #000;
-
     ${mq('m')} {
       height: calc(100vh - 70px);
       overflow-x: auto;

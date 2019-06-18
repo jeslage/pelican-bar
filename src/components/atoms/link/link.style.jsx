@@ -10,7 +10,6 @@ const StyledLink = styled.a`
   padding: 10px 20px;
   text-align: center;
   display: block;
-  margin: 20px 30px 30px;
 `;
 
 export default StyledLink;

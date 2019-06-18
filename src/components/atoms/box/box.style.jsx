@@ -16,31 +16,46 @@ const StyledBox = styled.div`
       background-blend-mode: multiply;
     `}
 
-  ${mq('m')} {
     ${props =>
       props.size === 's' &&
       css`
-        height: calc(10vw - 30px);
+        height: calc(22vw - 30px);
+
+        ${mq('m')} {
+          height: calc(10vw - 30px);
+        }
       `}
 
     ${props =>
       props.size === 'm' &&
       css`
-        height: calc(15vw - 40px);
+        height: calc(30vw - 30px);
+
+        ${mq('m')} {
+          height: calc(15vw - 30px);
+        }
       `}
     
     ${props =>
       props.size === 'l' &&
       css`
-        height: calc(22vw - 30px);
+        height: calc(44vw - 30px);
+
+        ${mq('m')} {
+          height: calc(22vw - 30px);
+        }
       `}
 
     ${props =>
       props.size === 'xl' &&
       css`
-        height: calc(33.333vw - 30px);
+        height: calc(66.66vw - 30px);
+
+        ${mq('m')} {
+          height: calc(33.333vw - 30px);
+        }
       `}
-  }
+  
 
 
   ${props =>

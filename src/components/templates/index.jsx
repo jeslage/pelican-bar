@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Row from '../molecules/row/row';
 import Box from '../atoms/box/box';
 import Headline from '../atoms/headline/headline';
-import Link from '../atoms/link/link';
+import CustomLink from '../atoms/link/link';
 import Content from '../molecules/content/content';
 import Section from '../organisms/section/section';
 import Gallery from '../organisms/gallery/gallery';
@@ -22,6 +23,8 @@ export const IndexPageTemplate = ({ vibes, bar, contact, route, reservation, ope
         <Box background="purple" size="m" />
 
         <Content headline={bar.headline} content={bar.description} />
+
+        <Box hasPattern background="white" size="xl" />
       </Row>
 
       <Row headline="Kontakt">
@@ -41,9 +44,9 @@ export const IndexPageTemplate = ({ vibes, bar, contact, route, reservation, ope
 
         <Content headline={route.headline} content={route.text}>
           {route.url && (
-            <Link href={route.url} target="_blank">
+            <CustomLink href={route.url} target="_blank">
               Zur Route
-            </Link>
+            </CustomLink>
           )}
         </Content>
 
@@ -58,6 +61,10 @@ export const IndexPageTemplate = ({ vibes, bar, contact, route, reservation, ope
         <Box background="white" size="s" noTopBorder />
 
         <Gallery {...vibes} />
+
+        <Content>
+          <Link to="/impressum">Impressum</Link> / <Link to="/datenschutz">Datenschutz</Link>
+        </Content>
       </Row>
     </Section>
   </DefaultLayout>

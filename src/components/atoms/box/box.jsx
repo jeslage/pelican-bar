@@ -9,15 +9,15 @@ const backgrounds = ['green', 'purple', 'salmon', 'yellow', 'blue', 'white'];
 const sizes = ['s', 'm', 'l', 'xl'];
 
 const Box = ({ background, size, hasPattern, noTopBorder }) => {
-  const randomBackground = hasPattern ? 'white' : randomValue(backgrounds);
-  const randomSize = randomValue(sizes);
-  const pattern = randomBackground === 'white';
+  const boxBackground = background || randomValue(backgrounds);
+  const boxSize = size || randomValue(sizes);
+  const boxPattern = hasPattern || boxBackground === 'white';
 
   return (
     <StyledBox
-      background={background || randomBackground}
-      hasPattern={hasPattern || pattern}
-      size={size || randomSize}
+      background={boxBackground}
+      hasPattern={boxPattern}
+      size={boxSize}
       noTopBorder={noTopBorder}
     />
   );

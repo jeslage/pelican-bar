@@ -18,7 +18,11 @@ const Gallery = ({ gallery, heroText }) => (
         {index === 0 ? (
           <Headline className="gallery__heroText">{heroText}</Headline>
         ) : (
-          <Box size="s" />
+          <Box
+            size={index === gallery.length - 1 ? 'xl' : 's'}
+            hasPattern={index === gallery.length - 1}
+            background={index === gallery.length - 1 ? 'white' : null}
+          />
         )}
       </div>
     ))}

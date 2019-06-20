@@ -9,10 +9,8 @@ bar:
     Abend mit groovigen Beats direkt an unserem Herzstück, dem großen
     pulsierenden Tresen oder auch in der coolen Raucher Lounge. 
 
-    <Box>
-
-    Handmade wird in der Pelican Bar groß geschrieben. Die Rezepturen für die
-    leckeren Drinks sind Eigenkreationen und werden mit selbstgemachten
+    <Box> Handmade wird in der Pelican Bar groß geschrieben. Die Rezepturen für
+    die leckeren Drinks sind Eigenkreationen und werden mit selbstgemachten
     Sirupvariationen, eigens hergestellten Dörrobst und Cocktailkirschen
     abgerundet.
 
@@ -20,10 +18,8 @@ bar:
     3 IPA oder auch die eine oder andere Spezialität von Ratsherrn sowie viele
     andere Gerstensäfte lassen das Herz von jedem Bierfreund frohlocken.
 
-    <Box>
-
-    Musikalisch wird es dann am Wochenende so richtig heiß, denn dann bringen
-    unsere ausgewählten DJs die Plattenteller zum brennen.
+    <Box> Musikalisch wird es dann am Wochenende so richtig heiß, denn dann
+    bringen unsere ausgewählten DJs die Plattenteller zum brennen.
 
     Sonny und Tubbs wurden hier schon auf ein Feierabendbierchen gesehen!
   headline: Willkommen in der Pelican Bar St Pauli!

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import DefaultLayout from '../layouts/default/default';
 import Box from '../atoms/box/box';
+import { TypoCopySmall } from '../../stylesheets/tools/typo';
 
 const StyledStaticPage = styled.div`
   width: 100%;
@@ -11,6 +12,11 @@ const StyledStaticPage = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 80px 20px;
+
+  p {
+    ${TypoCopySmall}
+    margin: 20px 0;
+  }
 `;
 
 export const StaticPageTemplate = ({ html, headline }) => {

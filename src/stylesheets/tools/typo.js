@@ -23,3 +23,15 @@ export const TypoCopy = `
     line-height: ${px2rem(50)};
   }
 `;
+
+export const TypoCopySmall = `
+  font-family: 'Lemur Medium', sans-serif;
+  font-weight: normal;
+  font-size: ${px2rem(12)};
+  line-height: ${px2rem(18)};
+
+  ${mq('m')} {
+    font-size: ${px2rem(16)};
+    line-height: ${px2rem(24)};
+  }
+`;

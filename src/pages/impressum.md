@@ -2,7 +2,16 @@
 type: static
 headline: Impressum
 ---
+## Impressum
 
-test
+GoldFischGlas GmbH\
+Friedensallee 75\
+22763 Hamburg
 
-test
+Email: kontakt@goldfischglas.de\
+Internet: www.goldfischglas.de \
+Vertretungsberechtigter Geschäftsführer: Detlef Brunkhorst
+
+Registernummer: HRB 121011\
+Registergericht: Amtsgericht Hamburg\
+Umsatzsteueridentifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 63527364839

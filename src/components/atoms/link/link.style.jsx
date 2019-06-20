@@ -6,10 +6,15 @@ const StyledLink = styled.a`
   ${TypoCopy}
   background-color: ${getColor('black')};
   color: ${getColor('white')};
-  border: none;
+  border: 8px solid ${getColor('black')};
   padding: 10px 20px;
   text-align: center;
   display: block;
+
+  &:hover {
+    color: ${getColor('black')};
+    background-color: ${getColor('white')};
+  }
 `;
 
 export default StyledLink;

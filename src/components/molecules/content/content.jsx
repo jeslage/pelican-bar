@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
+import { mq, px2rem } from '../../../stylesheets/tools';
 import { TypoCopy } from '../../../stylesheets/tools/typo';
 
 import Box from '../../atoms/box/box';
@@ -11,12 +12,28 @@ const StyledContent = styled.div`
   ${TypoCopy}
 
   p, .content__wrapper {
-    padding: 30px;
+    padding: ${px2rem(20)};
+
+    ${mq('m')} {
+      padding: ${px2rem(30)};
+    }
+  }
+
+  p > a {
+    border-bottom: 4px solid #000;
+
+    &:hover {
+      border-color: transparent;
+    }
   }
 
   .content__headline {
-    padding: 30px 30px 10px;
+    padding: ${px2rem(20)} ${px2rem(20)} ${px2rem(10)};
     margin-bottom: 20px;
+
+    ${mq('m')} {
+      padding: ${px2rem(30)} ${px2rem(30)} ${px2rem(10)};
+    }
   }
 `;
 

@@ -1,8 +1,11 @@
+/* eslint-disable no-irregular-whitespace */
 import styled from 'styled-components';
-import { mq } from '../../../stylesheets/tools/index';
+import { mq, px2rem } from '../../../stylesheets/tools/index';
+import { TypoCopy } from '../../../stylesheets/tools/typo';
 
 const StyledRow = styled.div`
   position: relative;
+  display: block;
   width: 100%;
 
   ${mq('m')} {
@@ -17,16 +20,19 @@ const StyledRow = styled.div`
   }
 
   .row__headline {
-    display: flex;
-    align-items: center;
-    height: 70px;
+    position: sticky;
+    top: 0;
     border-bottom: 8px solid black;
-    padding: 0 20px 3px;
     background: #fff;
     margin: 0;
+    z-index: 1;
+    padding: ${px2rem(15)} ${px2rem(20)};
 
+    ${mq('m')} {
+      padding: ${px2rem(15)} ${px2rem(30)};
+    }
     h3  {
-      font-size: 35px;
+      ${TypoCopy}
       margin: 0;
       line-height: 1;
       font-weight: normal;
@@ -34,9 +40,11 @@ const StyledRow = styled.div`
   }
 
   .row__wrapper {
+    position: relative;
+
     ${mq('m')} {
-      height: calc(100vh - 70px);
-      overflow-x: auto;
+      height: calc(100vh - 86px);
+      overflow-y: auto;
     }
   }
 `;

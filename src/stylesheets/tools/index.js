@@ -9,6 +9,7 @@ import {
 } from './grid';
 
 import getSpace from './spacings';
+import { fluidFontSize } from './typo';
 import { btnReset, centerChildren, getColor, mq, px2rem } from './utility';
 
 export {
@@ -17,6 +18,7 @@ export {
   DebugGrid,
   getColor,
   getSpace,
+  fluidFontSize,
   mq,
   px2rem,
   useGridGutter,

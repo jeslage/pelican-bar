@@ -19,14 +19,13 @@ const StyledStaticPage = styled.div`
   }
 `;
 
-export const StaticPageTemplate = ({ html, headline }) => {
+export const StaticPageTemplate = ({ html, htmlContent, headline }) => {
   return (
     <DefaultLayout>
       <Box size="s" noTopBorder />
       <StyledStaticPage>
         <h1>{headline}</h1>
-
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        {htmlContent ? <div dangerouslySetInnerHTML={{ __html: html }} /> : <div>{html}</div>}
       </StyledStaticPage>
       <Box size="l" noBottomBorder />
     </DefaultLayout>
@@ -35,7 +34,7 @@ export const StaticPageTemplate = ({ html, headline }) => {
 
 const StaticPage = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
-  return <StaticPageTemplate html={html} {...frontmatter} />;
+  return <StaticPageTemplate html={html} htmlContent {...frontmatter} />;
 };
 
 export const pageQuery = graphql`

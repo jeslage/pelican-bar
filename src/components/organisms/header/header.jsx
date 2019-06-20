@@ -6,14 +6,14 @@ import StyledHeader from './header.style';
 
 const Header = ({ title }) => (
   <StyledHeader>
-    <div className="header__logo">
-      <Link to="/" aria-label={`${title} Startseite`}>
+    <Link to="/" aria-label={`${title} Startseite`}>
+      <div className="header__logo">
         <PelicanType />
-      </Link>
-    </div>
-    <div className="header__signet">
-      <PelicanSignet />
-    </div>
+      </div>
+      <div className="header__signet">
+        <PelicanSignet />
+      </div>
+    </Link>
   </StyledHeader>
 );
 

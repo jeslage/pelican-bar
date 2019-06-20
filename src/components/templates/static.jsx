@@ -1,14 +1,28 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 import DefaultLayout from '../layouts/default/default';
+import Box from '../atoms/box/box';
+
+const StyledStaticPage = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+`;
 
 export const StaticPageTemplate = ({ html, headline }) => {
   return (
     <DefaultLayout>
-      <h1>{headline}</h1>
+      <Box size="s" noTopBorder />
+      <StyledStaticPage>
+        <h1>{headline}</h1>
 
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </StyledStaticPage>
+      <Box size="l" noBottomBorder />
     </DefaultLayout>
   );
 };

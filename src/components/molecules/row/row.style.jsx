@@ -31,6 +31,7 @@ const StyledRow = styled.div`
     ${mq('m')} {
       padding: ${px2rem(15)} ${px2rem(30)};
     }
+
     h3  {
       ${TypoCopy}
       margin: 0;
@@ -43,8 +44,28 @@ const StyledRow = styled.div`
     position: relative;
 
     ${mq('m')} {
-      height: calc(100vh - 86px);
+      height: calc(100vh - 73px);
       overflow-y: auto;
+    }
+  }
+
+  .row__back-up {
+    width: 100%;
+    display: none;
+    padding: ${px2rem(15)} ${px2rem(30)};
+
+    ${mq('m')} {
+      display: block;
+    }
+
+    svg {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        transform: translateY(-3px);
+      }
     }
   }
 `;

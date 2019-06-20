@@ -2,8 +2,6 @@
 type: static
 headline: Impressum
 ---
-## Impressum
-
 GoldFischGlas GmbH\
 Friedensallee 75\
 22763 Hamburg

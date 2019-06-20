@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import DefaultLayout from '../layouts/default/default';
 import Box from '../atoms/box/box';
 import { TypoCopySmall } from '../../stylesheets/tools/typo';
+import PatternProvider from '../context/PatternContext';
 
 const StyledStaticPage = styled.div`
   width: 100%;
@@ -19,27 +20,79 @@ const StyledStaticPage = styled.div`
   }
 `;
 
-export const StaticPageTemplate = ({ content, htmlContent, headline }) => {
+export const StaticPageTemplate = ({
+  patternBackground,
+  seo,
+  globals,
+  content,
+  htmlContent,
+  headline
+}) => {
   return (
-    <DefaultLayout>
-      <Box size="xs" noTopBorder />
-      <StyledStaticPage>
-        <h1>{headline}</h1>
-        {htmlContent ? <div dangerouslySetInnerHTML={{ __html: content }} /> : <div>{content}</div>}
-      </StyledStaticPage>
-      <Box size="xs" noBottomBorder />
-    </DefaultLayout>
+    <PatternProvider patternBackground={patternBackground}>
+      <DefaultLayout seo={seo} globals={globals}>
+        <Box size="xs" noTopBorder />
+        <StyledStaticPage>
+          <h1>{headline}</h1>
+          {htmlContent ? (
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          ) : (
+            <div>{content}</div>
+          )}
+        </StyledStaticPage>
+        <Box size="xs" noBottomBorder />
+      </DefaultLayout>
+    </PatternProvider>
   );
 };
 
 const StaticPage = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark;
-  return <StaticPageTemplate content={html} htmlContent {...frontmatter} />;
+  const {
+    general: {
+      frontmatter: { seo, globals }
+    },
+    background,
+    content
+  } = data;
+  const { frontmatter, html } = content;
+  return (
+    <StaticPageTemplate
+      content={html}
+      htmlContent
+      {...frontmatter}
+      seo={seo}
+      globals={globals}
+      patternBackground={background}
+    />
+  );
 };
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(fields: { slug: { eq: $path } }) {
+    background: allFile(filter: { name: { eq: "pattern" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 2000) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    }
+    general: markdownRemark(frontmatter: { type: { eq: "general" } }) {
+      frontmatter {
+        globals {
+          title
+        }
+        seo {
+          description
+          keywords
+          title
+        }
+      }
+    }
+    content: markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
         headline

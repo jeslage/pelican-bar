@@ -26,6 +26,16 @@ const StyledBox = styled.div`
   }
 
   ${props =>
+    props.size === 'xs' &&
+    css`
+      padding-bottom: calc(1 / 8 * 100%);
+
+      .gatsby-image-wrapper > div {
+        padding-bottom: calc(1 / 8 * 100%) !important;
+      }
+    `}
+
+  ${props =>
     props.size === 's' &&
     css`
       padding-bottom: calc(1 / 4 * 100%);

@@ -50,7 +50,7 @@ const Box = ({ background, size, hasPattern, noTopBorder, noBottomBorder }) => {
       noTopBorder={noTopBorder}
       noBottomBorder={noBottomBorder}
     >
-      {boxPattern && renderImage()}
+      {boxPattern && size !== 'xs' && renderImage()}
     </StyledBox>
   );
 };

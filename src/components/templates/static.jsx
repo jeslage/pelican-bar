@@ -22,12 +22,12 @@ const StyledStaticPage = styled.div`
 export const StaticPageTemplate = ({ content, htmlContent, headline }) => {
   return (
     <DefaultLayout>
-      <Box size="s" noTopBorder />
+      <Box size="xs" noTopBorder />
       <StyledStaticPage>
         <h1>{headline}</h1>
         {htmlContent ? <div dangerouslySetInnerHTML={{ __html: content }} /> : <div>{content}</div>}
       </StyledStaticPage>
-      <Box size="l" noBottomBorder />
+      <Box size="xs" noBottomBorder />
     </DefaultLayout>
   );
 };

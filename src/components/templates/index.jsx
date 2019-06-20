@@ -57,6 +57,7 @@ export const IndexPageTemplate = ({ vibes, bar, contact, route, reservation, ope
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
+
   return <IndexPageTemplate {...frontmatter} />;
 };
 

@@ -6,9 +6,8 @@ const IndexPreview = ({ entry }) => {
 
   if (data) {
     return <IndexPageTemplate {...data} />;
-  } else {
-    return <div>Loading...</div>;
   }
+  return <div>Loading...</div>;
 };
 
 export default IndexPreview;

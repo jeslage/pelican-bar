@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
     font-display: block;
-    font-display: swap;
   }
 
   @font-face {
@@ -18,7 +17,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
     font-display: block;
-    font-display: swap;
   }
 
   * { -webkit-tap-highlight-color: rgba(0,0,0,0); }

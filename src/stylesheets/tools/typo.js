@@ -28,7 +28,7 @@ export const fluidFontSize = (minFontSize, maxFontSize, scaleFrom, scaleUntil, v
 `;
 
 export const TypoHero = `
-  font-family: 'Pelican Sans', sans-serif;
+  font-family: 'Pelican Sans', Arial, sans-serif;
   ${fluidFontSize(60, 95, 340, 1440, 33.33)}
   line-height: ${px2rem(80)};
   font-weight: normal;
@@ -39,7 +39,7 @@ export const TypoHero = `
 `;
 
 export const TypoCopy = `
-  font-family: 'Lemur Medium', sans-serif;
+  font-family: 'Lemur Medium', Arial, sans-serif;
   font-weight: normal;
   hyphens: auto;
   ${fluidFontSize(20, 35, 340, 1440, 33.33)}
@@ -47,7 +47,7 @@ export const TypoCopy = `
 `;
 
 export const TypoCopySmall = `
-  font-family: 'Lemur Medium', sans-serif;
+  font-family: 'Lemur Medium', Arial, sans-serif;
   font-weight: normal;
   hyphens: auto;
   ${fluidFontSize(12, 16, 340, 1440)}

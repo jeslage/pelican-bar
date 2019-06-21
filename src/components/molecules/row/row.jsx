@@ -20,7 +20,7 @@ const Row = ({ headline, children }) => {
       </div>
       <div className="row__wrapper" ref={rowRef}>
         {children}
-        <button className="row__back-up" type="button" onClick={handleClick}>
+        <button className="row__back-up" type="button" onClick={handleClick} aria-label="Nach oben">
           <svg xmlns="http://www.w3.org/2000/svg" width="51.072" height="32.608">
             <path d="M3.537 29.071l22-22 22 22" fill="none" stroke="#000" strokeWidth="10" />
           </svg>

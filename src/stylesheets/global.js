@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
     font-display: block;
+    font-display: swap;
   }
 
   @font-face {
@@ -17,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
     font-display: block;
+    font-display: swap;
   }
 
   * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
@@ -28,7 +30,6 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     font-family: "Lemur Medium", Arial, sans-serif;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;

@@ -15,7 +15,6 @@ const DefaultLayout = ({ children, seo, globals }) => (
         {seo && seo.title && <meta name="title" content={seo.title} />}
         {seo && seo.description && <meta name="description" content={seo.description} />}
         {seo && seo.keywords && <meta name="keywords" content={seo.keywords} />}
-        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-icon-180x180.png" />
       </Helmet>
       <GlobalStyle />
       <Header title={globals ? globals.title : 'Pelican Bar'} />

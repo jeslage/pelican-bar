@@ -38,43 +38,43 @@ module.exports = {
         display: 'standalone',
         icons: [
           {
-            src: `/icon-72x72`,
+            src: `/static/icons/icon-72x72`,
             sizes: `72x72`,
             type: `image/png`
           },
           {
-            src: `/icon-96x96`,
+            src: `/static/icons/icon-96x96`,
             sizes: `96x96`,
             type: `image/png`
           },
           {
-            src: `/icon-128x128`,
+            src: `/static/icons/icon-128x128`,
             sizes: `128x128`,
             type: `image/png`
           },
 
           {
-            src: `/icon-144x144`,
+            src: `/static/icons/icon-144x144`,
             sizes: `144x144`,
             type: `image/png`
           },
           {
-            src: `/icon-152x152`,
+            src: `/static/icons/icon-152x152`,
             sizes: `152x152`,
             type: `image/png`
           },
           {
-            src: `/icon-192x192`,
+            src: `/static/icons/icon-192x192`,
             sizes: `192x192`,
             type: `image/png`
           },
           {
-            src: `/icon-384x384`,
+            src: `/static/icons/icon-384x384`,
             sizes: `384x384`,
             type: `image/png`
           },
           {
-            src: `/icon-512x512`,
+            src: `/static/icons/icon-512x512`,
             sizes: `512x512`,
             type: `image/png`
           }

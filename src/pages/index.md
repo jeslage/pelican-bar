@@ -48,7 +48,7 @@ reservation:
     Klar könnt ihr reservieren!
 
     Schreibt eine kurze Mail mit allen Eckdaten an: <a
-    href="mailto:benni@pelicanbar.de">benni@pelicanbar.de</a>
+    href="mailto:reservierungen@pelicanbar.de">reservierungen@pelicanbar.de</a>
 
     oder schreibt eine Nachricht über Instagram <a
     href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.

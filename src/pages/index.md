@@ -1,5 +1,8 @@
 ---
 type: index
+hero:
+  showHeroImage: true
+  heroImage:
 bar:
   description: >-
     Hier verwöhnen wir euch mit fruchtigen Drinks, verdammt guten Highballs und

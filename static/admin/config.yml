@@ -18,6 +18,12 @@ collections:
         delete: false
         fields:
           - { label: 'Type', name: 'type', widget: 'hidden', default: 'index' }
+          - label: 'Hero'
+            name: 'hero'
+            widget: 'object'
+            fields:
+              - { label: 'Show hero image', name: 'showHeroImage', widget: 'boolean', default: true }
+              - { label: 'Hero image', name: 'heroImage', widget: 'image' }
           - label: 'Bar'
             name: 'bar'
             widget: 'object'
@@ -70,7 +76,7 @@ collections:
                   widget: 'text',
                   hint: 'For a line-break insert <br>',
                 }
-              - { label: 'URL', name: 'url', widget: 'string', hint: 'Google Maps url' }
+              - { label: 'URL', name: 'url', widget: 'string', hint: 'Google Maps URL' }
           - label: 'Vibes'
             name: 'vibes'
             widget: 'object'

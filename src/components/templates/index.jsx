@@ -75,6 +75,7 @@ const IndexPage = ({ data }) => {
     background: { edges }
   } = data;
   const { frontmatter } = content;
+  console.log(frontmatter);
 
   return (
     <IndexPageTemplate
@@ -113,6 +114,10 @@ export const pageQuery = graphql`
     }
     content: markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
+        hero {
+          showHeroImage
+          heroImage
+        }
         vibes {
           heroText
           gallery {

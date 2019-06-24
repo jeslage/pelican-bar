@@ -40,8 +40,8 @@ contact:
 openingHours:
   headline: Öffnungszeiten
   text: |-
-    Dienstag – Samstag
-    18 Uhr – Open End
+    Dienstag — Samstag
+    18 Uhr — Open End
 reservation:
   headline: Reservierung
   text: >-

@@ -29,7 +29,7 @@ export const IndexPageTemplate = ({
   <PatternProvider patternBackground={patternBackground}>
     <DefaultLayout seo={seo} globals={globals}>
       {hero.showHeroImage && <HeroImage image={hero.heroImage} />}
-      <Section>
+      <Section id="main-section">
         <Row headline="Bar">
           <Box hasPattern noTopBorder background="white" size="m" />
           <Headline>{bar.heroText}</Headline>

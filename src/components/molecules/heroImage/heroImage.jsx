@@ -9,21 +9,21 @@ import { px2rem, mq } from '../../../stylesheets/tools';
 const StyledHeroImage = styled.div`
   position: relative;
   width: 100%;
-  height: calc(50vh - 60px);
+  height: calc(50vh - 52px);
 
-  ${mq('m')} {
-    height: calc(100vh - 75px);
+  ${mq('l')} {
+    height: calc(100vh - 66px);
   }
 
   .heroImage__wrapper {
     position: fixed;
     top: 0;
     left: 0;
-    height: calc(50vh - 60px);
+    height: calc(50vh - 52px);
     width: 100%;
 
-    ${mq('m')} {
-      height: calc(100vh - 75px);
+    ${mq('l')} {
+      height: calc(100vh - 66px);
     }
   }
 
@@ -36,10 +36,6 @@ const StyledHeroImage = styled.div`
       width: 100%;
       object-fit: cover;
     }
-  }
-
-  ${mq('m')} {
-    height: calc(100vh - 75px);
   }
 
   .heroImage__scroll {

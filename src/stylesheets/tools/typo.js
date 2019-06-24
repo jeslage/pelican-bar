@@ -27,26 +27,22 @@ export const fluidFontSize = (minFontSize, maxFontSize, scaleFrom, scaleUntil, v
   }
 `;
 
-export const TypoHero = `
+export const TypoHero = () => `
   font-family: 'Pelican Sans', Arial, sans-serif;
+  line-height: 1.5;
   ${fluidFontSize(60, 95, 340, 1440, 33.33)}
-  line-height: ${px2rem(80)};
   font-weight: normal;
-
-  ${mq('m')} {
-    line-height: ${px2rem(110)};
-  }
 `;
 
-export const TypoCopy = `
+export const TypoCopy = () => `
   font-family: 'Lemur Medium', Arial, sans-serif;
   font-weight: normal;
   hyphens: auto;
-  ${fluidFontSize(20, 28, 340, 1440, 33.33)}
   line-height: 1.5;
+  ${fluidFontSize(20, 28, 340, 1440, 33.33)}
 `;
 
-export const TypoCopySmall = `
+export const TypoCopySmall = () => `
   font-family: 'Lemur Medium', Arial, sans-serif;
   font-weight: normal;
   hyphens: auto;

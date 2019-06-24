@@ -8,7 +8,7 @@ const StyledRow = styled.div`
   display: block;
   width: 100%;
 
-  ${mq('m')} {
+  ${mq('l')} {
     display: inline-block;
     height: 100vh;
     width: 33.33%;
@@ -31,7 +31,7 @@ const StyledRow = styled.div`
     z-index: 1;
     padding: ${px2rem(15)} ${px2rem(20)};
 
-    ${mq('m')} {
+    ${mq('l')} {
       height: 75px;
       padding: ${px2rem(15)} ${px2rem(30)};
     }
@@ -47,7 +47,7 @@ const StyledRow = styled.div`
   .row__wrapper {
     position: relative;
 
-    ${mq('m')} {
+    ${mq('l')} {
       height: calc(100vh - 73px);
       overflow-y: auto;
     }
@@ -58,7 +58,7 @@ const StyledRow = styled.div`
     display: none;
     padding: ${px2rem(15)} ${px2rem(30)};
 
-    ${mq('m')} {
+    ${mq('l')} {
       display: block;
     }
 

@@ -7,7 +7,7 @@ const StyledSection = styled.div`
   width: 100%;
   background: #fff;
 
-  ${mq('m')} {
+  ${mq('l')} {
     display: flex;
   }
 `;

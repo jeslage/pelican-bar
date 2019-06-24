@@ -33,19 +33,6 @@ export function getColor(id = '#000') {
 }
 
 /**
- * Center children via flexbox.
- * @example ${centerChildren()};
- */
-export function centerChildren() {
-  return `
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `;
-}
-
-/**
  * CSS to reset button styling.
  * @returns {string}
  * @example ${btnReset()}

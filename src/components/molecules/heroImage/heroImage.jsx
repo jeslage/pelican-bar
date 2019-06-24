@@ -65,7 +65,7 @@ const StyledHeroImage = styled.div`
 
 const HeroImage = ({ image }) => {
   const handleClick = () => {
-    const { top } = document.getElementById('main-section').getBoundingClientRect();
+    const top = document.getElementById('main-section').offsetTop;
 
     window.scrollTo({
       top,

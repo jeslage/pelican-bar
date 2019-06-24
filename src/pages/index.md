@@ -1,8 +1,8 @@
 ---
 type: index
 hero:
+  heroImage: /images/bar-pelican-4-19-4057_2.jpg
   showHeroImage: true
-  heroImage:
 bar:
   description: >-
     Hier verwöhnen wir euch mit fruchtigen Drinks, verdammt guten Highballs und

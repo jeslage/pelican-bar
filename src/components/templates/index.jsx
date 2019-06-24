@@ -7,6 +7,7 @@ import Box from '../atoms/box/box';
 import Headline from '../atoms/headline/headline';
 import CustomLink from '../atoms/link/link';
 import Content from '../molecules/content/content';
+import HeroImage from '../molecules/heroImage/heroImage';
 import Section from '../organisms/section/section';
 import Gallery from '../organisms/gallery/gallery';
 
@@ -17,6 +18,7 @@ export const IndexPageTemplate = ({
   patternBackground,
   seo,
   globals,
+  hero,
   vibes,
   bar,
   contact,
@@ -26,6 +28,7 @@ export const IndexPageTemplate = ({
 }) => (
   <PatternProvider patternBackground={patternBackground}>
     <DefaultLayout seo={seo} globals={globals}>
+      {hero.showHeroImage && <HeroImage image={hero.heroImage} />}
       <Section>
         <Row headline="Bar">
           <Box hasPattern noTopBorder background="white" size="m" />
@@ -116,7 +119,13 @@ export const pageQuery = graphql`
       frontmatter {
         hero {
           showHeroImage
-          heroImage
+          heroImage {
+            childImageSharp {
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+            }
+          }
         }
         vibes {
           heroText

@@ -21,6 +21,9 @@ const StyledRow = styled.div`
 
   .row__headline {
     position: sticky;
+    height: 60px;
+    display: flex;
+    align-items: center;
     top: 0;
     border-bottom: 8px solid black;
     background: #fff;
@@ -29,6 +32,7 @@ const StyledRow = styled.div`
     padding: ${px2rem(15)} ${px2rem(20)};
 
     ${mq('m')} {
+      height: 75px;
       padding: ${px2rem(15)} ${px2rem(30)};
     }
 

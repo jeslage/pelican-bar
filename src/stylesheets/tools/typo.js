@@ -42,7 +42,7 @@ export const TypoCopy = `
   font-family: 'Lemur Medium', Arial, sans-serif;
   font-weight: normal;
   hyphens: auto;
-  ${fluidFontSize(20, 35, 340, 1440, 33.33)}
+  ${fluidFontSize(20, 28, 340, 1440, 33.33)}
   line-height: 1.5;
 `;
 

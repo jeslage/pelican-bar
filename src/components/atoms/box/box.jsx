@@ -9,7 +9,7 @@ import { PatternContext } from '../../context/PatternContext';
 
 const randomValue = array => array[Math.floor(Math.random() * array.length)];
 
-const backgrounds = ['green', 'purple', 'salmon', 'yellow', 'blue', 'white'];
+const backgrounds = ['green', 'purple', 'salmon', 'yellow', 'blue'];
 const sizes = ['s', 'm', 'l', 'xl'];
 
 const Box = ({ background, size, hasPattern, noTopBorder, noBottomBorder }) => {
@@ -17,7 +17,7 @@ const Box = ({ background, size, hasPattern, noTopBorder, noBottomBorder }) => {
 
   const boxBackground = background || randomValue(backgrounds);
   const boxSize = size || randomValue(sizes);
-  const boxPattern = hasPattern || boxBackground === 'white';
+  const boxPattern = hasPattern;
 
   const renderImage = () =>
     patternBackground && patternBackground.childImageSharp ? (

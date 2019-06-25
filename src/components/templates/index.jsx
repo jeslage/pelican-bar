@@ -61,10 +61,9 @@ export const IndexPageTemplate = ({
         <Row headline="Vibes">
           <Box background="white" size="s" noTopBorder />
           <Gallery {...vibes} />
-          <Content>
+          <Content hasBottomBorder>
             <Link to="/impressum">Impressum</Link> / <Link to="/datenschutz">Datenschutz</Link>
           </Content>
-          <Box hasPattern background="white" size="l" />
         </Row>
       </Section>
     </DefaultLayout>

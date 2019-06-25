@@ -16,7 +16,8 @@ const breakpoints = {
   s: '480px',
   m: '768px',
   l: '940px',
-  xl: '1280px'
+  xl: '1280px',
+  xxl: '1441px'
 };
 
 // Spacings

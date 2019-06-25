@@ -9,8 +9,9 @@ import Box from '../../atoms/box/box';
 
 const StyledContent = styled.div`
   background: #fff;
-  ${TypoCopy}
+  border-bottom: ${props => (props.hasBottomBorder ? '8px solid #000' : 'none')};
 
+  ${TypoCopy}
   p, .content__wrapper {
     padding: ${px2rem(20)};
 
@@ -37,11 +38,11 @@ const StyledContent = styled.div`
   }
 `;
 
-const Content = ({ children, content, headline }) => {
+const Content = ({ children, content, headline, hasBottomBorder }) => {
   const splittedContent = content ? content.split('<Box>') : null;
 
   return (
-    <StyledContent>
+    <StyledContent hasBottomBorder={hasBottomBorder}>
       {headline && <p className="content__headline">{headline}</p>}
       {splittedContent &&
         splittedContent.map((text, index) => (
@@ -59,13 +60,15 @@ const Content = ({ children, content, headline }) => {
 Content.propTypes = {
   children: PropTypes.node,
   content: PropTypes.string,
-  headline: PropTypes.string
+  headline: PropTypes.string,
+  hasBottomBorder: PropTypes.bool
 };
 
 Content.defaultProps = {
   children: null,
   content: null,
-  headline: null
+  headline: null,
+  hasBottomBorder: false
 };
 
 export default Content;

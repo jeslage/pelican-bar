@@ -29,9 +29,17 @@ export const fluidFontSize = (minFontSize, maxFontSize, scaleFrom, scaleUntil, v
 
 export const TypoHero = () => `
   font-family: 'Pelican Sans', Arial, sans-serif;
-  line-height: 1.5;
-  ${fluidFontSize(60, 95, 340, 1440, 33.33)}
+  line-height: 1.3;
+  font-size: ${px2rem(60)};
   font-weight: normal;
+
+  ${mq('m')} {
+    font-size: ${px2rem(70)};
+  }
+
+  ${mq('xxl')} {
+    font-size: ${px2rem(95)};
+  }
 `;
 
 export const TypoCopy = () => `

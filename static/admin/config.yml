@@ -30,7 +30,11 @@ collections:
             fields:
               - { label: 'Herotext', name: 'heroText', widget: 'string' }
               - { label: 'Headline', name: 'headline', widget: 'string' }
-              - { label: 'Description', name: 'description', widget: 'text' }
+              - { label: 'Description', 
+                  name: 'description', 
+                  widget: 'text',
+                  hint: 'For a line-break insert <br>. For a divider box insert <Box/>.'
+                }
           - label: 'Contact'
             name: 'contact'
             widget: 'object'

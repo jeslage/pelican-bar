@@ -29,7 +29,7 @@ bar:
   heroText: Most fly  bar in  Hamburg
 contact:
   headline: Kontakt
-  heroText: We’re a fiend for Mojito’s
+  heroText: We’re a friend for Mojito’s
   text: |-
     Pelican Bar
     Am Brunnenhof 2-4<br>

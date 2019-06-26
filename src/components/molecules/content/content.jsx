@@ -10,9 +10,10 @@ import Box from '../../atoms/box/box';
 const StyledContent = styled.div`
   background: #fff;
   border-bottom: ${props => (props.hasBottomBorder ? '8px solid #000' : 'none')};
-
   ${TypoCopy}
-  p, .content__wrapper {
+
+  p,
+  .content__wrapper {
     padding: ${px2rem(20)};
 
     ${mq('m')} {

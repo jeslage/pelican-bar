@@ -13,10 +13,14 @@ const StyledStaticPage = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 80px 20px;
+  ${TypoCopySmall}
 
   p {
-    ${TypoCopySmall}
     margin: 20px 0;
+  }
+
+  ul {
+    padding-left: 18px;
   }
 `;
 

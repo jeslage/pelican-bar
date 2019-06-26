@@ -2,14 +2,20 @@
 type: static
 headline: Impressum
 ---
-GoldFischGlas GmbH\
-Friedensallee 75\
-22763 Hamburg
+Pelican Bar\
+Am Brunnenhof 2–4\
+22767 Hamburg
 
-Email: kontakt@goldfischglas.de\
-Internet: www.goldfischglas.de \
+Email: eric@pelicanbar.de\
+Internet: www.pelicanbar.de \
 Vertretungsberechtigter Geschäftsführer: Detlef Brunkhorst
 
 Registernummer: HRB 121011\
 Registergericht: Amtsgericht Hamburg\
 Umsatzsteueridentifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 63527364839
+
+Konzept und Design:\
+www.pauleslage.de
+
+Umsetzung:\
+www.johanneseslage.de

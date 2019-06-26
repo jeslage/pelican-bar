@@ -79,7 +79,12 @@ const HeroImage = ({ image }) => {
           <img src={image} alt="" />
         )}
       </div>
-      <button className="heroImage__scroll" type="button" onClick={handleClick}>
+      <button
+        className="heroImage__scroll"
+        type="button"
+        onClick={handleClick}
+        aria-label="Zum Hauptinhalt"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="51.072" height="32.608">
           <path d="M3.537 29.071l22-22 22 22" fill="none" stroke="#000" strokeWidth="10" />
         </svg>

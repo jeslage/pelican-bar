@@ -1,6 +1,6 @@
 backend:
   name: 'git-gateway'
-  branch: 'develop'
+  branch: 'master'
   accept_roles:
     - 'admin'
     - 'editor'

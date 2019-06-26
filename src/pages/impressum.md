@@ -15,9 +15,7 @@ Registergericht: Amtsgericht Hamburg\
 Umsatzsteueridentifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 63527364839
 
 Konzept und Design:\
-Paul Eslage\
-www.pauleslage.de
+Paul Eslage (www.pauleslage.de)
 
 Umsetzung:\
-Johannes Eslage\
-www.johanneseslage.de
+Johannes Eslage (www.johanneseslage.de)

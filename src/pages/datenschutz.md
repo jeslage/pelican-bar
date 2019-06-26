@@ -29,7 +29,7 @@ Eric Lebendig\
 Am Brunnenhof 2–4\
 22767 Hamburg\
 eric@pelicanbar.de\
-https://pelicanbar.de/datenschutz
+https://pelicanbar.de/impressum
 
 Webhosting
 

@@ -14,7 +14,7 @@ Registernummer: HRB 121011\
 Registergericht: Amtsgericht Hamburg\
 Umsatzsteueridentifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 63527364839
 
-Konzept und Design:\
+Design:\
 Paul Eslage (www.pauleslage.de)
 
 Umsetzung:\

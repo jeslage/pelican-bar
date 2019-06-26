@@ -8,12 +8,12 @@ Für jegliche Reproduktion von Inhalten dieser Webseite wird die Genehmigung des
 
 Verantwortlich für die Datenverarbeitung ist:
 
-Goldfischglas GmbH\
+Pelican Bar\
 Detlef Brunkhorst\
 Eric Lebendig\
-Friedensallee 75\
-22763 Hamburg\
-kontakt@goldfischglas.de
+Am Brunnenhof 2–4\
+22767 Hamburg\
+eric@pelicanbar.de
 
 Datenschutzerklärung
 
@@ -23,13 +23,13 @@ Wer bei uns für die Datenverarbeitung verantwortlich ist
 
 Verantwortlich für die Datenverarbeitung ist:
 
-Goldfischglas GmbH\
+Pelican Bar\
 Detlef Brunkhorst\
 Eric Lebendig\
-Friedensallee 75\
-22763 Hamburg\
-kontakt@goldfischglas.de\
-http://goldfischglas.de/#/impressum
+Am Brunnenhof 2–4\
+22767 Hamburg\
+eric@pelicanbar.de\
+https://pelicanbar.de/datenschutz
 
 Webhosting
 

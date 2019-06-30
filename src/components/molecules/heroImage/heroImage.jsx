@@ -23,7 +23,7 @@ const StyledHeroImage = styled.div`
     width: 100%;
 
     ${mq('l')} {
-      height: calc(100vh - 66px);
+      height: 100vh;
     }
   }
 

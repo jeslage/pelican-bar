@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
     height: 70px;
     top: 0;
     background: #fff;
-    z-index: 1;
+    z-index: 99;
     border-bottom: 8px solid black;
     padding: 0;
     width: 100vh;

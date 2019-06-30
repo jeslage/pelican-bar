@@ -29,16 +29,18 @@ export const fluidFontSize = (minFontSize, maxFontSize, scaleFrom, scaleUntil, v
 
 export const TypoHero = () => `
   font-family: 'Pelican Sans', Arial, sans-serif;
-  line-height: 1.3;
-  font-size: ${px2rem(60)};
+  line-height: ${px2rem(80)};
+  font-size: ${px2rem(70)};
   font-weight: normal;
 
   ${mq('m')} {
-    font-size: ${px2rem(70)};
+    line-height: ${px2rem(75)};
+    font-size: ${px2rem(65)};
   }
 
   ${mq('xxl')} {
-    font-size: ${px2rem(95)};
+    line-height: ${px2rem(95)};
+    font-size: ${px2rem(80)};
   }
 `;
 

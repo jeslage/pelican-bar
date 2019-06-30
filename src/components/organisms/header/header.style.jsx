@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { mq } from '../../../stylesheets/tools/index';
 
 const StyledHeader = styled.header`
   a {
     position: fixed;
-    height: 70px;
+    height: 55px;
     top: 0;
     background: #fff;
     z-index: 99;
@@ -15,6 +16,10 @@ const StyledHeader = styled.header`
     transform-origin: top right;
     display: flex;
     align-items: center;
+
+    ${mq('m')} {
+      height: 70px;
+    }
   }
 
   .header__logo {
@@ -37,7 +42,11 @@ const StyledHeader = styled.header`
 
   svg {
     transform-origin: center;
-    height: 50px;
+    height: 40px;
+
+    ${mq('m')} {
+      height: 50px;
+    }
   }
 `;
 

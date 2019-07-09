@@ -1,7 +1,7 @@
 ---
 type: index
 hero:
-  heroImage: /images/pelican_header.png
+  heroImage: /images/pelican_header2.png
   showHeroImage: true
 bar:
   description: >-
@@ -60,7 +60,7 @@ route:
 vibes:
   gallery:
     - /images/01_pelican_galerie.png
-    - /images/02_pelican_galerie.png
+    - /images/02_pelican_galerie2.png
     - /images/03_pelican_galerie.png
     - /images/04_pelican_galerie.png
     - /images/05_pelican_galerie.png

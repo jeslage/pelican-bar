@@ -62,7 +62,6 @@ vibes:
     - /images/01_pelican_galerie.png
     - /images/02_pelican_galerie2.png
     - /images/03_pelican_galerie.png
-    - /images/04_pelican_galerie.png
     - /images/05_pelican_galerie.png
     - /images/06_pelican_galerie.png
     - /images/07_pelican_galerie.png

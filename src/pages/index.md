@@ -1,12 +1,12 @@
 ---
 type: index
 hero:
-  heroImage: /images/pelican_header.png
+  heroImage: /images/pelican_header2.png
   showHeroImage: true
 bar:
   description: >-
     Hier verwöhnen wir euch mit fruchtigen Drinks, verdammt guten Highballs und
-    frisch gezapftem Craft Beer. 
+    frisch gezapftem Craft Beer.
 
     Lasst euch ins Miami der 80er Jahre versetzen und verbringt einen smoothen
     Abend mit groovigen Beats direkt an unserem Herzstück, dem großen
@@ -26,17 +26,17 @@ bar:
 
     Sonny und Tubbs wurden hier schon auf ein Feierabendbierchen gesehen!
   headline: Willkommen in der Pelican Bar St Pauli!
-  heroText: Most fly  bar in  Hamburg
+  heroText: Most fly bar in Hamburg
 contact:
   headline: Kontakt
-  heroText: We’re a friend for Mojito’s
+  heroText: Happy Hour bis 22 Uhr
   text: |-
     Pelican Bar
     Am Brunnenhof 2-4<br>
     22767 Hamburg<br>
     <br>
-    M: <a href="mailto:benni@pelicanbar.de">benni@pelicanbar.de</a><br>
-    IG: <a href="https://www.instagram.com/bar_pelican/">@bar_pelican</a><br>
+    Mail: <a href="mailto:info@pelicanbar.de">info@pelicanbar.de</a><br>
+    Insta: <a href="https://www.instagram.com/bar_pelican/">@bar_pelican</a><br>
 openingHours:
   headline: Öffnungszeiten
   text: |-
@@ -48,7 +48,7 @@ reservation:
     Klar könnt ihr reservieren!
 
     Schreibt eine kurze Mail mit allen Eckdaten an: <a
-    href="mailto:reservierungen@pelicanbar.de">reservierungen@pelicanbar.de</a>
+    href="mailto:info@pelicanbar.de">info@pelicanbar.de</a>
 
     oder schreibt eine Nachricht über Instagram <a
     href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
@@ -60,9 +60,8 @@ route:
 vibes:
   gallery:
     - /images/01_pelican_galerie.png
-    - /images/02_pelican_galerie.png
+    - /images/02_pelican_galerie2.png
     - /images/03_pelican_galerie.png
-    - /images/04_pelican_galerie.png
     - /images/05_pelican_galerie.png
     - /images/06_pelican_galerie.png
     - /images/07_pelican_galerie.png

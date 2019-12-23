@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { btnReset } from './tools/index';
-import { LemurMediumWoff, LemurMediumWoff2, PelicanSansWoff, PelicanSansWoff2 } from './fonts';
+import { LemurMediumWoff, LemurMediumWoff2, PelicanPosterWoff, PelicanPosterWoff2 } from './fonts';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Pelican Sans';
-    src: local("Pelican Sans"), local("pelican-sans-beta-italic-webfont"), url(${PelicanSansWoff}) format("woff"), url(${PelicanSansWoff2}) format("woff2");
+    src: local("Pelican Sans"), local("pelican-sans-beta-italic-webfont"), url(${PelicanPosterWoff}) format("woff"), url(${PelicanPosterWoff2}) format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: block;

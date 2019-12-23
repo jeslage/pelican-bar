@@ -28,10 +28,11 @@ export const fluidFontSize = (minFontSize, maxFontSize, scaleFrom, scaleUntil, v
 `;
 
 export const TypoHero = () => `
-  font-family: 'Pelican Sans', Arial, sans-serif;
+  font-family: 'Pelican Poster', Arial, sans-serif;
   line-height: ${px2rem(60)};
   font-size: ${px2rem(50)};
   font-weight: normal;
+  font-feature-settings: 'ss01' on; 
 
   ${mq('m')} {
     line-height: ${px2rem(75)};
@@ -39,8 +40,8 @@ export const TypoHero = () => `
   }
 
   ${mq('xxl')} {
-    line-height: ${px2rem(95)};
-    font-size: ${px2rem(80)};
+    line-height: ${px2rem(100)};
+    font-size: ${px2rem(90)};
   }
 `;
 

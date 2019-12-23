@@ -22,7 +22,12 @@ collections:
             name: 'hero'
             widget: 'object'
             fields:
-              - { label: 'Show hero image', name: 'showHeroImage', widget: 'boolean', default: true }
+              - {
+                  label: 'Show hero image',
+                  name: 'showHeroImage',
+                  widget: 'boolean',
+                  default: true,
+                }
               - { label: 'Hero image', name: 'heroImage', widget: 'image' }
           - label: 'Bar'
             name: 'bar'
@@ -30,10 +35,11 @@ collections:
             fields:
               - { label: 'Herotext', name: 'heroText', widget: 'string' }
               - { label: 'Headline', name: 'headline', widget: 'string' }
-              - { label: 'Description', 
-                  name: 'description', 
+              - {
+                  label: 'Description',
+                  name: 'description',
                   widget: 'text',
-                  hint: 'For a line-break insert <br>. For a divider box insert <Box/>.'
+                  hint: 'For a line-break insert <br>. For a divider box insert <Box/>.',
                 }
           - label: 'Contact'
             name: 'contact'

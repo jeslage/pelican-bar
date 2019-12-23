@@ -5,15 +5,15 @@ import { LemurMediumWoff, LemurMediumWoff2, PelicanPosterWoff, PelicanPosterWoff
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Lemur Medium';
-    src: local("Lemur Medium"), local("lemur-medium-webfont"), url(${LemurMediumWoff}) format("woff"), url(${LemurMediumWoff2}) format("woff2");
+    src: url(${LemurMediumWoff}) format("woff"), url(${LemurMediumWoff2}) format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: block;
   }
 
   @font-face {
-    font-family: 'Pelican Sans';
-    src: local("Pelican Sans"), local("pelican-sans-beta-italic-webfont"), url(${PelicanPosterWoff}) format("woff"), url(${PelicanPosterWoff2}) format("woff2");
+    font-family: 'Pelican Poster';
+    src: url(${PelicanPosterWoff}) format("woff"), url(${PelicanPosterWoff2}) format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -23,7 +23,6 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     text-size-adjust: 100%;
-    text-rendering: optimizeSpeed;
   }
   
   body {

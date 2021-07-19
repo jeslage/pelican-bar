@@ -77,7 +77,6 @@ const IndexPage = ({ data }) => {
     background: { edges }
   } = data;
   const { frontmatter } = content;
-  console.log(frontmatter);
 
   return (
     <IndexPageTemplate

@@ -4,6 +4,7 @@ import StyledRow from './row.style';
 
 const Row = ({ headline, children }) => {
   const rowRef = useRef(null);
+
   const handleClick = () => {
     if (rowRef.current) {
       rowRef.current.scrollTo({

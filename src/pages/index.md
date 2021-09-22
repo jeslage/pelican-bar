@@ -32,8 +32,8 @@ contact:
 openingHours:
   headline: Öffnungszeiten
   text: |-
-    Dienstag - Freitag ab 16 Uhr
-    Samstag - Sonntag ab 12 Uhr
+    Dienstag - Freitag ab 18 Uhr
+    Samstag - Sonntags ab 14 Uhr
 reservation:
   headline: Reservierung
   text: >-

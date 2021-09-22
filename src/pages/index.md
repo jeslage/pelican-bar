@@ -50,11 +50,9 @@ route:
   url: https://www.google.de/maps/dir//Pelican,+Am+Brunnenhof+2-4,+22767+Hamburg/@53.5533788,9.9558922,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b18fa18478ab43:0x52388599b960131b!2m2!1d9.9580809!2d53.5533788!3e0
 vibes:
   gallery:
-    - /images/01_pelican_galerie.png
+    - /images/2021_0910_19522700.jpg
     - /images/02_pelican_galerie2.png
     - /images/03_pelican_galerie.png
-    - /images/05_pelican_galerie.png
-    - /images/06_pelican_galerie.png
     - /images/07_pelican_galerie.png
   heroText: Sonny Crockett’s favourite place
 ---

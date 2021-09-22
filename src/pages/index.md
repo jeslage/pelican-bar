@@ -1,7 +1,7 @@
 ---
 type: index
 hero:
-  heroImage: /images/pelican_header2.png
+  heroImage: /images/2021_0910_19522300.jpg
   showHeroImage: true
 bar:
   description: >-

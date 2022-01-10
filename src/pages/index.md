@@ -5,8 +5,13 @@ hero:
   showHeroImage: true
 bar:
   description: >-
-    Hier verwöhnen wir euch mit fruchtigen Drinks, verdammt guten Highballs und
-    frisch gezapftem Craft Beer.
+    Wegen Corona und den geltenden Kontaktbeschränkungen gilt bei uns 2G+. Heißt
+    im Klartext: Geimpft + Test (24h gültig), Geimpft + Geboostert oder Geimpft
+    + Genesen (nicht länger als 6 Monate) und eine maximale Gruppenanzahl von 10
+    Personen.<br>
+
+
+    Hier verwöhnen wir euch mit fruchtigen Drinks, verdammt guten Highballs und frisch gezapftem Craft Beer.
 
     Lasst euch ins Miami der 80er Jahre versetzen und verbringt einen smoothen Abend mit groovigen Beats direkt an unserem Herzstück, dem großen pulsierenden Tresen oder auch in der coolen Raucher Lounge. 
 
@@ -37,9 +42,7 @@ openingHours:
 reservation:
   headline: Reservierung
   text: >-
-    Unter der Woche nehmen wir gerne Reservierungen entgegen!
-
-    Am Wochenende leider nicht.
+    Wir nehmen Reservierungen an!
 
     Schreibt eine kurze Mail mit allen Eckdaten an: <a href="mailto:info@pelicanbar.de">info@pelicanbar.de</a>
 

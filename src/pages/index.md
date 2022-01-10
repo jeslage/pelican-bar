@@ -17,7 +17,7 @@ bar:
     <Box> Musikalisch wird es dann am Wochenende so richtig heiß, denn dann bringen unsere ausgewählten DJs die Plattenteller zum brennen.
 
     Sonny und Tubbs wurden hier schon auf ein Feierabendbierchen gesehen!
-  headline: Willkommen in der Pelican Bar St Pauli!
+  headline: Willkommen im Pelican <3
   heroText: Most fly bar in Hamburg
 contact:
   headline: Kontakt
@@ -32,8 +32,8 @@ contact:
 openingHours:
   headline: Öffnungszeiten
   text: |-
-    Sonntags  - Donnerstags ab 18 Uhr
-    Freitags & Samstags ab 14 uhr
+    Donnerstags ab 18 Uhr
+    Freitags & Samstags ab 14 Uhr
 reservation:
   headline: Reservierung
   text: >-

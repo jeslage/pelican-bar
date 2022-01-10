@@ -21,7 +21,7 @@ bar:
   heroText: Most fly bar in Hamburg
 contact:
   headline: Kontakt
-  heroText: Happy Hour bis 22 Uhr
+  heroText: Caipi Happy Hour bis 22 Uhr
   text: |-
     Pelican Bar
     Am Brunnenhof 2-4<br>

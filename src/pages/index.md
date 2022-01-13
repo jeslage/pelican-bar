@@ -44,9 +44,10 @@ reservation:
   text: >-
     Wir nehmen Reservierungen an!
 
-    Schreibt eine kurze Mail mit allen Eckdaten an: <a href="mailto:info@pelicanbar.de">info@pelicanbar.de</a>
 
-    oder schreibt eine Nachricht über Instagram <a href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
+    Schreibt uns einfach eine Nachricht mit allen Eckdaten via Instagram <a href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
+
+    oder eine kurze Mail an: <a href="mailto:info@pelicanbar.de">info@pelicanbar.de</a>
 route:
   headline: Anfahrt
   text: Pelican Bar<br> Am Brunnenhof 2-4<br>  22767 Hamburg<br>

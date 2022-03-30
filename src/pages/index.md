@@ -37,8 +37,8 @@ contact:
 openingHours:
   headline: Öffnungszeiten
   text: |-
-    Open every Day
-    Sonntag-Donnerstag ab 18 Uhr
+    Open every Day<br>
+    Sonntag-Donnerstag ab 18 Uhr<br>
     Freitag & Samstag ab 14 Uhr 
 reservation:
   headline: Reservierung

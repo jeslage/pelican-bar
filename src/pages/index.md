@@ -51,7 +51,7 @@ route:
 vibes:
   gallery:
     - /images/2021_0910_19522700.jpg
-    - /images/02_pelican_galerie2.png
+    - /images/pelican-13.jpg
     - /images/03_pelican_galerie.png
     - /images/07_pelican_galerie.png
   heroText: Sonny Crockett’s favourite place

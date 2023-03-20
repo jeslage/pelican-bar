@@ -33,7 +33,7 @@ openingHours:
   headline: Öffnungszeiten
   text: |-
     Open every Day<br>
-    Sonntag-Donnerstag ab 18 Uhr<br>
+    Sonntag-Donnerstag ab 18 Uhr <br>
     Freitag & Samstag ab 14 Uhr 
 reservation:
   headline: Reservierung
@@ -53,6 +53,6 @@ vibes:
     - /images/2021_0910_19522700.jpg
     - /images/pelican-13.jpg
     - /images/pelican-28.jpg
-    - /images/07_pelican_galerie.png
+    - /images/dscf5169.jpg
   heroText: Sonny Crockett’s favourite place
 ---

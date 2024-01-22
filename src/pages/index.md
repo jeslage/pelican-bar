@@ -40,6 +40,8 @@ reservation:
   text: >-
     Wir nehmen Reservierungen an!
 
+    (Freitag und Samstag bis 19 Uhr)
+
 
     Schreibt uns einfach eine Nachricht mit allen Eckdaten via Instagram <a href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
 

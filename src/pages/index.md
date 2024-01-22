@@ -11,12 +11,6 @@ bar:
     Lasst euch ins Miami der 80er Jahre versetzen und verbringt einen smoothen Abend mit groovigen Beats direkt an unserem Herzstück, dem großen pulsierenden Tresen oder auch in der coolen Raucher Lounge. 
 
     <Box> Handmade wird in der Pelican Bar groß geschrieben. Die Rezepturen für die leckeren Drinks sind Eigenkreationen und werden mit selbstgemachten Sirupvariationen, eigens hergestellten Dörrobst und Cocktailkirschen abgerundet.
-
-    Die Bierauswahl ist auch nicht von schlechten Eltern. Frisch gezapftes Simco 3 IPA oder auch die eine oder andere Spezialität von Ratsherrn sowie viele andere Gerstensäfte lassen das Herz von jedem Bierfreund frohlocken.
-
-    <Box> Musikalisch wird es dann am Wochenende so richtig heiß, denn dann bringen unsere ausgewählten DJs die Plattenteller zum brennen.
-
-    Sonny und Tubbs wurden hier schon auf ein Feierabendbierchen gesehen!
   headline: Willkommen im Pelican <3
   heroText: Most fly bar in Hamburg
 contact:

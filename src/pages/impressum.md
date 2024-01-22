@@ -6,7 +6,7 @@ Pelican Bar\
 Am Brunnenhof 2–4\
 22767 Hamburg
 
-Email: eric@pelicanbar.de\
+Email: info@pelicanbar.de\
 Internet: www.pelicanbar.de \
 Vertretungsberechtigter Geschäftsführer: Detlef Brunkhorst
 

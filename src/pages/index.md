@@ -4,13 +4,15 @@ hero:
   heroImage: /images/2021_0910_19522300.jpg
   showHeroImage: true
 bar:
-  description: >-
+  description: >
     
     Hier verwöhnen wir euch mit fruchtigen Drinks, verdammt guten Highballs und frisch gezapftem Craft Beer.
 
     Lasst euch ins Miami der 80er Jahre versetzen und verbringt einen smoothen Abend mit groovigen Beats direkt an unserem Herzstück, dem großen pulsierenden Tresen oder auch in der coolen Raucher Lounge. 
 
     <Box> Handmade wird in der Pelican Bar groß geschrieben. Die Rezepturen für die leckeren Drinks sind Eigenkreationen und werden mit selbstgemachten Sirupvariationen, eigens hergestellten Dörrobst und Cocktailkirschen abgerundet.
+
+    <Box/> 
   headline: Willkommen im Pelican <3
   heroText: Most fly bar in Hamburg
 contact:

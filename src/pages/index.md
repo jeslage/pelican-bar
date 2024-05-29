@@ -27,16 +27,14 @@ contact:
     Insta: <a href="https://www.instagram.com/bar_pelican/">@bar_pelican</a><br>
 openingHours:
   headline: Öffnungszeiten
-  text: |-
-    Open every Day<br>
-    Sonntag-Donnerstag ab 18 Uhr <br>
-    Freitag & Samstag ab 14 Uhr 
+  text: |
+    Open every Day ab 14 Uhr
 reservation:
   headline: Reservierung
   text: >-
     Wir nehmen Reservierungen an!
 
-    (Freitag und Samstag bis 19 Uhr)
+    (Freitag und Samstag bis 20 Uhr)
 
 
     Schreibt uns einfach eine Nachricht mit allen Eckdaten via Instagram <a href="https://www.instagram.com/bar_pelican/">@bar_pelican</a>.
